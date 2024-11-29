@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
+  const navigate = useNavigate();
 
   const toggleNav = () => {
     setNavActive(!navActive);
@@ -31,6 +33,14 @@ function Navbar() {
       closeMenu;
     }
   }, []);
+
+  const handelLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    localStorage.removeItem("img");
+
+    navigate("/");
+  };
 
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
@@ -117,6 +127,28 @@ function Navbar() {
       >
         Contact Me
       </Link>
+      <a href="/login">
+        <button className="btn btn-primary me-2">Admin</button>
+      </a>
+      {localStorage.getItem("img") && localStorage.getItem("img") != null ? (
+        <img
+          src={localStorage.getItem("img")}
+          alt="Profile"
+          className="img-fluid rounded-circle"
+          style={{ width: "50px", height: "50px" }}
+        />
+      ) : (
+        ""
+      )}
+      {localStorage.getItem("token") &&
+      localStorage.getItem("token") != undefined &&
+      localStorage.getItem("token") != "" ? (
+        <button className="btn btn-danger" onClick={handelLogout}>
+          Log out
+        </button>
+      ) : (
+        ""
+      )}
     </nav>
   );
 }
