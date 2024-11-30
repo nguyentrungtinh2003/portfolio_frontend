@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Row, Col, Card } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import URL from "./URL";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -20,15 +21,13 @@ const Login = () => {
 
     try {
       // Gửi yêu cầu POST đến API login
-      const response = await axios.post(
-        "http://localhost:8080/user/login",
-        user
-      );
+      const response = await axios.post(`${URL}/user/login`, user);
 
       // Kiểm tra kết quả trả về và thực hiện các hành động sau khi đăng nhập thành công
       console.log("Login successful", response.data);
 
       if (response.data.token) {
+        localStorage.setItem("userID", response.data.data.id);
         localStorage.setItem("username", response.data.data.username);
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("img", response.data.data.img);

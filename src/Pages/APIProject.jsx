@@ -2,21 +2,21 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import URL from "./URL";
 
-const APISkill = () => {
-  const [skill, setSkill] = useState([]);
+const APIProject = () => {
+  const [project, setProject] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${URL}/skill/all`)
+      .get(`${URL}/project/all`)
       .then((response) => {
-        setSkill(response.data.data);
+        setProject(response.data.data);
       })
       .catch((err) => {
         console.log("Error " + err);
       });
   }, []);
 
-  return skill;
+  return project;
 };
 
-export default APISkill;
+export default APIProject;

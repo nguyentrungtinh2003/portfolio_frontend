@@ -131,12 +131,15 @@ function Navbar() {
         <button className="btn btn-primary me-2">Admin</button>
       </a>
       {localStorage.getItem("img") && localStorage.getItem("img") != null ? (
-        <img
-          src={localStorage.getItem("img")}
-          alt="Profile"
-          className="img-fluid rounded-circle"
-          style={{ width: "50px", height: "50px" }}
-        />
+        <>
+          <img
+            src={localStorage.getItem("img")}
+            alt="Profile"
+            className="img-fluid rounded-circle"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <strong>ID : {localStorage.getItem("userID")}</strong>
+        </>
       ) : (
         ""
       )}
