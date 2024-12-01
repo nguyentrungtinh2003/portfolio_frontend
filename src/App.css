@@ -1,5 +1,68 @@
 /* Global CSS */
+/* Navbar styles */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.navbar-logo {
+  width: 150px;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-btns {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-btns .btn {
+  margin-left: 10px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info img {
+  margin-right: 10px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  .navbar-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+/*---------------*/
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;

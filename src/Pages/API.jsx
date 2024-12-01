@@ -1,21 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import URL from "./URL";
 
-const API = () => {
-  const [user, setUser] = useState({});
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:8080/user/byName/Trung Tinh`)
-      .then((response) => {
-        setUser(response.data.data);
-      })
-      .catch((err) => {
-        console.log("Error " + err);
-      });
-  }, []);
-
-  return user;
+const API = async () => {
+  try {
+    const response = await axios.get(`${URL}/user/byName/Trung Tinh`);
+    return response.data.data; // Trả về dữ liệu người dùng
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+    return null; // Trả về null nếu có lỗi
+  }
 };
 
 export default API;

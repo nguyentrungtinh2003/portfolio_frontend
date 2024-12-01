@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -9,66 +9,41 @@ import {
   Form,
   Nav,
 } from "react-bootstrap";
-
+import APISkill from "./APISkill";
+import APIProject from "./APIProject";
+import API from "./API";
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("users");
   const [showModal, setShowModal] = useState(false);
 
-  // Sample data
-  const users = [
-    {
-      id: 1,
-      username: "john_doe",
-      fullName: "John Doe",
-      email: "john@example.com",
-      phoneNumber: "123-456-7890",
-      address: "123 Main St",
-      birthDay: "1990-01-01",
-      university: "University A",
-      hobby: "Photography",
-    },
-    {
-      id: 2,
-      username: "jane_smith",
-      fullName: "Jane Smith",
-      email: "jane@example.com",
-      phoneNumber: "987-654-3210",
-      address: "456 Elm St",
-      birthDay: "1992-02-02",
-      university: "University B",
-      hobby: "Reading",
-    },
-  ];
+  const [user, setUser] = useState({}); // Trạng thái người dùng
+  const [skill, setSkill] = useState([]); // Trạng thái kỹ năng
+  const [project, setProject] = useState([]); // Trạng thái dự án
 
-  const skills = [
-    { id: 1, name: "JavaScript", img: "js.png", level: "Advanced" },
-    { id: 2, name: "React", img: "react.png", level: "Intermediate" },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Chờ đợi dữ liệu từ API
+        const userData = await API();
+        const skillData = await APISkill();
+        const projectData = await APIProject();
 
-  const projects = [
-    {
-      id: 1,
-      name: "Portfolio Website",
-      description: "A personal portfolio site",
-      technology: "React, Node.js",
-      githubLink: "https://github.com/portfolio",
-      startDate: "2023-01-01",
-      endDate: "2023-06-01",
-      status: "Completed",
-      img: "portfolio.png",
-    },
-    {
-      id: 2,
-      name: "E-commerce App",
-      description: "A full-stack e-commerce application",
-      technology: "React, Spring Boot",
-      githubLink: "https://github.com/ecommerce-app",
-      startDate: "2023-02-01",
-      endDate: "2023-08-01",
-      status: "Ongoing",
-      img: "ecommerce.png",
-    },
-  ];
+        // Cập nhật trạng thái khi nhận được dữ liệu
+        setUser(userData);
+        setSkill(skillData);
+        setProject(projectData);
+
+        // Debug log để xem dữ liệu
+        console.log(userData);
+        console.log(skillData);
+        console.log(projectData);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+
+    fetchData(); // Gọi hàm fetchData khi component mount
+  }, []); // Chạy một lần khi component render lần đầu tiên
 
   // Handle Modal open/close
   const handleShow = () => setShowModal(true);
@@ -81,9 +56,11 @@ const Admin = () => {
         return (
           <>
             <h4>Manage Users</h4>
-            <Button variant="primary" onClick={handleShow}>
-              Add User
-            </Button>
+            <a href="/addUser">
+              <Button variant="primary">
+                <i className="fas fa-plus"></i>
+              </Button>
+            </a>
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -94,35 +71,38 @@ const Admin = () => {
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Address</th>
+                  <th>Position</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {users.map((user) => (
-                  <tr key={user.id}>
-                    <td>{user.id}</td>
-                    <td>{user.username}</td>
-                    <td>{user.fullName}</td>
-                    <td>
+                <tr key={user.id}>
+                  <td>{user.id}</td>
+                  <td>{user.username}</td>
+                  <td>{user.fullName}</td>
+                  <td>
+                    {" "}
+                    <img
+                      src={user.img}
+                      alt="Profile"
+                      className="img-fluid rounded-circle"
+                      style={{ width: "50px", height: "50px" }}
+                    />
+                  </td>
+                  <td>{user.email}</td>
+                  <td>{user.phoneNumber}</td>
+                  <td>{user.address}</td>
+                  <td>{user.position}</td>
+                  <td>
+                    <Button variant="warning" className="me-2">
+                      <i className="fas fa-edit"></i>
+                    </Button>
+                    <Button variant="danger">
                       {" "}
-                      <img
-                        src={user.profileImg}
-                        alt="Profile"
-                        className="img-fluid rounded-circle"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </td>
-                    <td>{user.email}</td>
-                    <td>{user.phoneNumber}</td>
-                    <td>{user.address}</td>
-                    <td>
-                      <Button variant="warning" className="me-2">
-                        Edit
-                      </Button>
-                      <Button variant="danger">Delete</Button>
-                    </td>
-                  </tr>
-                ))}
+                      <i className="fas fa-trash"></i>{" "}
+                    </Button>
+                  </td>
+                </tr>
               </tbody>
             </Table>
           </>
@@ -131,29 +111,44 @@ const Admin = () => {
         return (
           <>
             <h4>Manage Skills</h4>
-            <Button variant="primary" onClick={handleShow}>
-              Add Skill
-            </Button>
+            <a href="/addSkill">
+              <Button variant="primary">
+                <i className="fas fa-plus"></i>
+              </Button>
+            </a>
             <Table striped bordered hover>
               <thead>
                 <tr>
                   <th>#</th>
                   <th>Name</th>
                   <th>Level</th>
+                  <th>Img</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {skills.map((skill) => (
-                  <tr key={skill.id}>
-                    <td>{skill.id}</td>
-                    <td>{skill.name}</td>
-                    <td>{skill.level}</td>
+                {skill.map((ski) => (
+                  <tr key={ski.id}>
+                    <td>{ski.id}</td>
+                    <td>{ski.name}</td>
+                    <td>{ski.level}</td>
+                    <td>
+                      {" "}
+                      <img
+                        src={ski.img}
+                        alt="skill"
+                        className="img-fluid rounded-circle"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </td>
                     <td>
                       <Button variant="warning" className="me-2">
-                        Edit
+                        <i className="fas fa-edit"></i>
                       </Button>
-                      <Button variant="danger">Delete</Button>
+                      <Button variant="danger">
+                        {" "}
+                        <i className="fas fa-trash"></i>{" "}
+                      </Button>
                     </td>
                   </tr>
                 ))}
@@ -165,9 +160,11 @@ const Admin = () => {
         return (
           <>
             <h4>Manage Projects</h4>
-            <Button variant="primary" onClick={handleShow}>
-              Add Project
-            </Button>
+            <a href="/addProject">
+              <Button variant="primary">
+                <i className="fas fa-plus"></i>
+              </Button>
+            </a>
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -176,11 +173,12 @@ const Admin = () => {
                   <th>Description</th>
                   <th>Technology</th>
                   <th>Status</th>
+                  <th>Img</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                {projects.map((project) => (
+                {project.map((project) => (
                   <tr key={project.id}>
                     <td>{project.id}</td>
                     <td>{project.name}</td>
@@ -188,10 +186,22 @@ const Admin = () => {
                     <td>{project.technology}</td>
                     <td>{project.status}</td>
                     <td>
+                      {" "}
+                      <img
+                        src={project.img}
+                        alt="Profile"
+                        className="img-fluid rounded-circle"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </td>
+                    <td>
                       <Button variant="warning" className="me-2">
-                        Edit
+                        <i className="fas fa-edit"></i>
                       </Button>
-                      <Button variant="danger">Delete</Button>
+                      <Button variant="danger">
+                        {" "}
+                        <i className="fas fa-trash"></i>{" "}
+                      </Button>
                     </td>
                   </tr>
                 ))}
