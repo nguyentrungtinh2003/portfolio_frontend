@@ -1,3 +1,4 @@
+import SendEmailForm from "../../SendEmailForm ";
 import AboutMe from "../AboutMe";
 import ContactMe from "../ContactMe";
 import Footer from "../Footer";
@@ -14,7 +15,8 @@ export default function Home() {
       <AboutMe />
       <MyPortfolio />
       <Testimonial />
-      <ContactMe />
+      {/* <ContactMe /> */}
+      <SendEmailForm />
       <Footer />
     </>
   );

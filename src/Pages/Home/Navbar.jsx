@@ -38,12 +38,14 @@ function Navbar() {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-light ${
+      className={`navbar navbar-expand-lg navbar-light fixed-top ${
         navActive ? "active" : ""
       }`}
     >
       <div className="container-fluid">
-        Portfolio
+        <a href="/" className="text-decoration-none">
+          <h3>Portfolio</h3>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -76,10 +78,10 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="MyPortfolio"
+                to="mySkills"
                 className="nav-link"
               >
-                Portfolio
+                MySkill
               </Link>
             </li>
             <li className="nav-item">
@@ -104,30 +106,51 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
+                to="MyPortfolio"
+                className="nav-link"
+              >
+                Portfolio
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 to="testimonial"
                 className="nav-link"
               >
                 Testimonials
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="sendmail"
+                className="nav-link"
+              >
+                Send Mail
+              </Link>
+            </li>
           </ul>
           <div className="navbar-btns">
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="Contact"
-              className="btn btn-outline-primary"
-            >
-              Contact Me
-            </Link>
             <a href="/login">
-              <button className="btn btn-primary ms-2">
-                {" "}
-                <i className="fas fa-edit"></i> Edit
+              <button className="btn btn-primary m-2">
+                <i class="fas fa-edit"></i>
+              </button>
+            </a>
+            <a href="/chat">
+              <button className="btn btn-primary m-2">
+                <i class="fas fa-comments"></i>
               </button>
             </a>
 
@@ -141,7 +164,9 @@ function Navbar() {
                 />
 
                 <a href="/dashboard">
-                  <button className="btn btn-primary ms-2">Dashboard</button>
+                  <button className="btn btn-primary m-2">
+                    <i class="fas fa-dashboard"></i>
+                  </button>
                 </a>
               </div>
             )}

@@ -13,6 +13,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Pages/Login";
 import AddSkill from "./Pages/AddSkill";
 import AddProject from "./Pages/AddProject";
+import UpdateSkill from "./Pages/UpdateSkill";
+import UpdateUser from "./Pages/UpdateUser";
+import ChatRoom from "./Pages/ChatRoom";
 
 function App() {
   return (
@@ -27,7 +30,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/addSkill" element={<AddSkill />} />
             <Route path="/addProject" element={<AddProject />} />
-
+            <Route path="/updateSkill/:id" element={<UpdateSkill />} />
+            <Route path="/updateUser/:id" element={<UpdateUser />} />
+            <Route path="/chat" element={<ChatRoom />} />
 
             {/* Private route for /dashboard */}
             <Route

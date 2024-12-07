@@ -12,6 +12,7 @@ import {
 import APISkill from "./APISkill";
 import APIProject from "./APIProject";
 import API from "./API";
+import { Link } from "react-scroll";
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("users");
   const [showModal, setShowModal] = useState(false);
@@ -94,9 +95,11 @@ const Admin = () => {
                   <td>{user.address}</td>
                   <td>{user.position}</td>
                   <td>
-                    <Button variant="warning" className="me-2">
-                      <i className="fas fa-edit"></i>
-                    </Button>
+                    <a href={`/updateUser/${user.id}`}>
+                      <button variant="warning" className="me-2">
+                        <i className="fas fa-edit"></i>
+                      </button>
+                    </a>
                     <Button variant="danger">
                       {" "}
                       <i className="fas fa-trash"></i>{" "}
@@ -127,31 +130,35 @@ const Admin = () => {
                 </tr>
               </thead>
               <tbody>
-                {skill.map((ski) => (
-                  <tr key={ski.id}>
-                    <td>{ski.id}</td>
-                    <td>{ski.name}</td>
-                    <td>{ski.level}</td>
-                    <td>
-                      {" "}
-                      <img
-                        src={ski.img}
-                        alt="skill"
-                        className="img-fluid rounded-circle"
-                        style={{ width: "50px", height: "50px" }}
-                      />
-                    </td>
-                    <td>
-                      <Button variant="warning" className="me-2">
-                        <i className="fas fa-edit"></i>
-                      </Button>
-                      <Button variant="danger">
+                {skill &&
+                  skill.map((ski) => (
+                    <tr key={ski.id}>
+                      <td>{ski.id}</td>
+                      <td>{ski.name}</td>
+                      <td>{ski.level}</td>
+                      <td>
                         {" "}
-                        <i className="fas fa-trash"></i>{" "}
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
+                        <img
+                          src={ski.img}
+                          alt="skill"
+                          className="img-fluid rounded-circle"
+                          style={{ width: "50px", height: "50px" }}
+                        />
+                      </td>
+                      <td>
+                        <a href={`/updateSkill/${ski.id}`}>
+                          <button variant="warning" className="me-2">
+                            <i className="fas fa-edit"></i>
+                          </button>
+                        </a>
+
+                        <Button variant="danger">
+                          {" "}
+                          <i className="fas fa-trash"></i>{" "}
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </Table>
           </>
