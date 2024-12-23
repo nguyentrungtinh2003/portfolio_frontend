@@ -202,9 +202,11 @@ const Admin = () => {
                       />
                     </td>
                     <td>
-                      <Button variant="warning" className="me-2">
-                        <i className="fas fa-edit"></i>
-                      </Button>
+                      <a href={`/updateProject/${project.id}`}>
+                        <button variant="warning" className="me-2">
+                          <i className="fas fa-edit"></i>
+                        </button>
+                      </a>
                       <Button variant="danger">
                         {" "}
                         <i className="fas fa-trash"></i>{" "}

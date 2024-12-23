@@ -7,7 +7,7 @@ const AddSkill = () => {
   const [name, setName] = useState("");
   const [level, setLevel] = useState("");
   const [img, setImg] = useState(null);
-  const userID = localStorage.getItem("userID");
+  const userID = parseInt(localStorage.getItem("userID"));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,7 +23,9 @@ const AddSkill = () => {
 
     formData.append(
       "skill",
-      new Blob([JSON.stringify(skill)], { type: "application/json" })
+      new Blob([JSON.stringify({ name, level, user: { id: userID } })], {
+        type: "application/json",
+      })
     );
     formData.append("img", img);
 

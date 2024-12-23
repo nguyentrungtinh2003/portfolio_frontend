@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import URL from "./URL";
 import { useParams } from "react-router-dom";
@@ -13,6 +13,13 @@ const UpdateSkill = () => {
   });
   const [img, setImg] = useState(null);
   const [responseMessage, setResponseMessage] = useState("");
+
+  useEffect(() => {
+    axios.get(`${URL}/skill/${id}`).then((response) => {
+      setFormData(response.data.data);
+      setImg(response.data.data.img);
+    });
+  }, [id]);
 
   // Check if userID exists
   if (!userID) {
@@ -71,7 +78,7 @@ const UpdateSkill = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-100">
       <h2>Update Skill</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="mb-3">
@@ -114,6 +121,14 @@ const UpdateSkill = () => {
             onChange={handleFileChange}
             accept="image/*"
           />
+          {img && (
+            <img
+              src={typeof img === "string" ? img : URL.createObjectURL(img)}
+              alt="Skill"
+              className="img-fluid rounded-circle mt-2"
+              style={{ width: "100px", height: "100px" }}
+            />
+          )}
         </div>
         <button type="submit" className="btn btn-primary">
           Update Skill

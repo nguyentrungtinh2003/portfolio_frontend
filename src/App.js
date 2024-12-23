@@ -16,6 +16,7 @@ import AddProject from "./Pages/AddProject";
 import UpdateSkill from "./Pages/UpdateSkill";
 import UpdateUser from "./Pages/UpdateUser";
 import ChatRoom from "./Pages/ChatRoom";
+import UpdateProject from "./Pages/UpdateProject";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/addProject" element={<AddProject />} />
             <Route path="/updateSkill/:id" element={<UpdateSkill />} />
             <Route path="/updateUser/:id" element={<UpdateUser />} />
+            <Route path="/updateProject/:id" element={<UpdateProject />} />
             <Route path="/chat" element={<ChatRoom />} />
 
             {/* Private route for /dashboard */}

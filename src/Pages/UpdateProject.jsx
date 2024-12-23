@@ -3,38 +3,32 @@ import axios from "axios";
 import URL from "./URL";
 import { useParams } from "react-router-dom";
 
-const UpdateUser = () => {
+const UpdateProject = () => {
   const { id } = useParams();
-  const [userData, setUserData] = useState({
-    username: "",
-    password: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    fullName: "",
-    position: "",
-    university: "",
-    birthDay: "",
-    hobby: "",
+  const [projectData, setProjectData] = useState({
+    name: "",
+    description: "",
+    startDate: "",
+    endDate: "",
+    status: "",
+    technology: "",
+    githubLink: "",
   });
   const [image, setImage] = useState(null);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get(`${URL}/user/${id}`).then((response) => {
+    axios.get(`${URL}/project/${id}`).then((response) => {
       const data = response.data.data;
       if (data) {
-        setUserData({
-          username: data.username || "",
-          password: data.password || "",
-          email: data.email || "",
-          phoneNumber: data.phoneNumber || "",
-          address: data.address || "",
-          fullName: data.fullName || "",
-          position: data.position || "",
-          university: data.university || "",
-          birthDay: data.birthDay || "",
-          hobby: data.hobby || "",
+        setProjectData({
+          name: data.name || "",
+          description: data.description || "",
+          startDate: data.startDate || "",
+          endDate: data.endDate || "",
+          status: data.status || "",
+          technology: data.technology || "",
+          githubLink: data.githubLink || "",
         });
         setImage(data.img || null);
       }
@@ -43,8 +37,8 @@ const UpdateUser = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData({
-      ...userData,
+    setProjectData({
+      ...projectData,
       [name]: value,
     });
   };
@@ -59,22 +53,19 @@ const UpdateUser = () => {
     // Create FormData
     const formData = new FormData();
 
-    // Append user data as a JSON string blob
+    // Append project data as a JSON string blob
     formData.append(
-      "user",
+      "project",
       new Blob(
         [
           JSON.stringify({
-            username: userData.username,
-            password: userData.password,
-            email: userData.email,
-            phoneNumber: userData.phoneNumber,
-            address: userData.address,
-            fullName: userData.fullName,
-            position: userData.position,
-            university: userData.university,
-            birthDay: userData.birthDay,
-            hobby: userData.hobby,
+            name: projectData.name,
+            description: projectData.description,
+            startDate: projectData.startDate,
+            endDate: projectData.endDate,
+            status: projectData.status,
+            technology: projectData.technology,
+            githubLink: projectData.githubLink,
           }),
         ],
         { type: "application/json" }
@@ -87,38 +78,38 @@ const UpdateUser = () => {
     }
 
     try {
-      const response = await axios.put(`${URL}/user/${id}`, formData);
-      setMessage("User updated successfully!");
+      const response = await axios.put(`${URL}/project/${id}`, formData);
+      setMessage("Project updated successfully!");
       console.log("Response:", response.data);
     } catch (error) {
-      setMessage("Error updating user. Please try again.");
+      setMessage("Error updating project. Please try again.");
       console.error("Error:", error);
     }
   };
 
   return (
     <div className="container mt-100">
-      <h2>Update User Information</h2>
+      <h2>Update Project Information</h2>
       {message && <div className="alert alert-info">{message}</div>}
       <form onSubmit={handleSubmit} encType="multipart/form-data">
-        {Object.keys(userData).map((key) => (
+        {Object.keys(projectData).map((key) => (
           <div className="mb-3" key={key}>
             <label htmlFor={key} className="form-label">
               {key.charAt(0).toUpperCase() + key.slice(1)}
             </label>
             <input
-              type={key === "birthDay" ? "date" : "text"}
+              type={key.includes("Date") ? "date" : "text"}
               className="form-control"
               id={key}
               name={key}
-              value={userData[key]}
+              value={projectData[key]}
               onChange={handleChange}
             />
           </div>
         ))}
         <div className="mb-3">
           <label htmlFor="img" className="form-label">
-            Profile Image
+            Project Image
           </label>
           <input
             type="file"
@@ -129,19 +120,21 @@ const UpdateUser = () => {
           />
           {image && (
             <img
-              src={image}
-              alt="Profile"
-              className="img-fluid rounded-circle mt-2"
+              src={
+                typeof image === "string" ? image : URL.createObjectURL(image)
+              }
+              alt="Project"
+              className="img-fluid rounded mt-2"
               style={{ width: "100px", height: "100px" }}
             />
           )}
         </div>
         <button type="submit" className="btn btn-primary">
-          Update User
+          Update Project
         </button>
       </form>
     </div>
   );
 };
 
-export default UpdateUser;
+export default UpdateProject;
