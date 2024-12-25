@@ -10,6 +10,7 @@ import Navbar from "./Pages/Home/Navbar";
 import Home from "./Pages/Home/Homescreen";
 import Admin from "./Pages/Admin";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
 import Login from "./Pages/Login";
 import AddSkill from "./Pages/AddSkill";
 import AddProject from "./Pages/AddProject";
@@ -17,6 +18,9 @@ import UpdateSkill from "./Pages/UpdateSkill";
 import UpdateUser from "./Pages/UpdateUser";
 import ChatRoom from "./Pages/ChatRoom";
 import UpdateProject from "./Pages/UpdateProject";
+import ViewUser from "./Pages/ViewUser";
+import ViewSkill from "./Pages/ViewSkill";
+import ViewProject from "./Pages/ViewProject";
 
 function App() {
   return (
@@ -32,8 +36,11 @@ function App() {
             <Route path="/addSkill" element={<AddSkill />} />
             <Route path="/addProject" element={<AddProject />} />
             <Route path="/updateSkill/:id" element={<UpdateSkill />} />
+            <Route path="/viewSkill/:id" element={<ViewSkill />} />
             <Route path="/updateUser/:id" element={<UpdateUser />} />
+            <Route path="/viewUser/:id" element={<ViewUser />} />
             <Route path="/updateProject/:id" element={<UpdateProject />} />
+            <Route path="/viewProject/:id" element={<ViewProject />} />
             <Route path="/chat" element={<ChatRoom />} />
 
             {/* Private route for /dashboard */}

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import URL from "./URL";
 import { useParams } from "react-router-dom";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import { Card, Container, Row, Col, ListGroup, Badge } from "react-bootstrap";
 
 const UpdateProject = () => {
   const { id } = useParams();
@@ -79,7 +81,14 @@ const UpdateProject = () => {
 
     try {
       const response = await axios.put(`${URL}/project/${id}`, formData);
-      setMessage("Project updated successfully!");
+      toast.success("Cập nhật thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        location.replace("/dashboard");
+      }, 3000);
       console.log("Response:", response.data);
     } catch (error) {
       setMessage("Error updating project. Please try again.");
@@ -89,7 +98,10 @@ const UpdateProject = () => {
 
   return (
     <div className="container mt-100">
-      <h2>Update Project Information</h2>
+      <ToastContainer />
+      <Card.Header className="text-center bg-primary text-white">
+        <h3>Update Project</h3>
+      </Card.Header>
       {message && <div className="alert alert-info">{message}</div>}
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {Object.keys(projectData).map((key) => (

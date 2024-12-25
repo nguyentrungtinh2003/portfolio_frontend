@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Row, Col, Card } from "react-bootstrap";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast, Slide } from "react-toastify";
 import URL from "./URL";
 
 const Login = () => {
@@ -31,7 +32,14 @@ const Login = () => {
         localStorage.setItem("username", response.data.data.username);
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("img", response.data.data.img);
-        location.replace("/dashboard");
+        toast.success("Đăng nhập thành công!", {
+          position: "top-right",
+          autoClose: 3000,
+          transition: Slide,
+        });
+        setTimeout(() => {
+          location.replace("/dashboard");
+        }, 3000);
       }
       if (response.data.status === 500) {
         setError("Username hoặc password không đúng !");
@@ -45,6 +53,7 @@ const Login = () => {
 
   return (
     <Container className="d-flex justify-content-center align-items-center vh-100">
+      <ToastContainer />
       <Row>
         <Col>
           <Card className="p-4 shadow-sm" style={{ maxWidth: "400px" }}>

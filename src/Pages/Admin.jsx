@@ -12,7 +12,7 @@ import {
 import APISkill from "./APISkill";
 import APIProject from "./APIProject";
 import API from "./API";
-import { Link } from "react-scroll";
+import { ToastContainer, toast, Slide } from "react-toastify";
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("users");
   const [showModal, setShowModal] = useState(false);
@@ -95,6 +95,11 @@ const Admin = () => {
                   <td>{user.address}</td>
                   <td>{user.position}</td>
                   <td>
+                    <a href={`/viewUser/${user.id}`}>
+                      <button variant="warning" className="me-2">
+                        <i className="fas fa-eye"></i>
+                      </button>
+                    </a>
                     <a href={`/updateUser/${user.id}`}>
                       <button variant="warning" className="me-2">
                         <i className="fas fa-edit"></i>
@@ -146,6 +151,11 @@ const Admin = () => {
                         />
                       </td>
                       <td>
+                        <a href={`/viewSkill/${ski.id}`}>
+                          <button variant="warning" className="me-2">
+                            <i className="fas fa-eye"></i>
+                          </button>
+                        </a>
                         <a href={`/updateSkill/${ski.id}`}>
                           <button variant="warning" className="me-2">
                             <i className="fas fa-edit"></i>
@@ -202,6 +212,11 @@ const Admin = () => {
                       />
                     </td>
                     <td>
+                      <a href={`/viewProject/${project.id}`}>
+                        <button variant="warning" className="me-2">
+                          <i className="fas fa-eye"></i>
+                        </button>
+                      </a>
                       <a href={`/updateProject/${project.id}`}>
                         <button variant="warning" className="me-2">
                           <i className="fas fa-edit"></i>

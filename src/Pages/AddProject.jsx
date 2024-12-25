@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Form, Button, ListGroup, Container, Row, Col } from "react-bootstrap";
 import URL from "./URL";
-
+import { ToastContainer, toast, Slide } from "react-toastify";
 const AddProject = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -58,7 +58,14 @@ const AddProject = () => {
         },
       });
       console.log(response.data);
-      alert("Project added successfully!");
+      toast.success("Thêm dự án thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        location.replace("/dashboard");
+      }, 3000);
     } catch (error) {
       console.error(error);
       alert("Failed to add project.");
@@ -66,7 +73,8 @@ const AddProject = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center">
+    <Container className="d-flex justify-content-center align-items-center mt-100">
+      <ToastContainer />
       <Row className="w-100">
         <Col md={8} lg={6} className="mx-auto">
           <h2 className="text-center mb-4">Add New Project</h2>

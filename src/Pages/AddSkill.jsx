@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Form, Button, Container, Row, Col } from "react-bootstrap"; // Import thêm Container, Row, Col
 import URL from "./URL";
-
+import { ToastContainer, toast, Slide } from "react-toastify";
 const AddSkill = () => {
   const [name, setName] = useState("");
   const [level, setLevel] = useState("");
@@ -36,7 +36,14 @@ const AddSkill = () => {
         },
       });
       console.log(response.data);
-      alert("Skill added successfully!");
+      toast.success("Thêm kĩ năng thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        location.replace("/dashboard");
+      }, 3000);
     } catch (error) {
       console.error(error);
       alert("Failed to add skill.");
@@ -48,6 +55,7 @@ const AddSkill = () => {
       className="d-flex justify-content-center align-items-center"
       style={{ height: "100vh" }}
     >
+      <ToastContainer />
       <Row className="w-100">
         <Col md={6} className="mx-auto">
           <h2 className="text-center mb-4">Add New Skill</h2>

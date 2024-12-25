@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import URL from "./URL";
 import { useParams } from "react-router-dom";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import { Card, Container, Row, Col, ListGroup, Badge } from "react-bootstrap";
 
 const UpdateUser = () => {
   const { id } = useParams();
@@ -88,7 +90,14 @@ const UpdateUser = () => {
 
     try {
       const response = await axios.put(`${URL}/user/${id}`, formData);
-      setMessage("User updated successfully!");
+      toast.success("Cập nhật thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        location.replace("/dashboard");
+      }, 3000);
       console.log("Response:", response.data);
     } catch (error) {
       setMessage("Error updating user. Please try again.");
@@ -98,8 +107,10 @@ const UpdateUser = () => {
 
   return (
     <div className="container mt-100">
-      <h2>Update User Information</h2>
-      {message && <div className="alert alert-info">{message}</div>}
+      <ToastContainer />
+      <Card.Header className="text-center bg-primary text-white">
+        <h3>Update User</h3>
+      </Card.Header>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {Object.keys(userData).map((key) => (
           <div className="mb-3" key={key}>

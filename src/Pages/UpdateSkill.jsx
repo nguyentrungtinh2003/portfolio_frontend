@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import URL from "./URL";
 import { useParams } from "react-router-dom";
+import { ToastContainer, toast, Slide } from "react-toastify";
+import { Card, Container, Row, Col, ListGroup, Badge } from "react-bootstrap";
 
 const UpdateSkill = () => {
   const { id } = useParams();
@@ -44,18 +46,13 @@ const UpdateSkill = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const {
-      name,
-      level,
-      user: { id: userID },
-    } = formData;
 
     // Create a FormData object for the multipart request
     const data = new FormData();
     // data.append("skill", JSON.stringify({ name, level, user: { id: userID } }));
     data.append(
       "skill",
-      new Blob([JSON.stringify({ name, level, user: { id: userID } })], {
+      new Blob([JSON.stringify(formData)], {
         type: "application/json",
       })
     );
@@ -69,7 +66,14 @@ const UpdateSkill = () => {
           "Content-Type": "multipart/form-data",
         },
       });
-      setResponseMessage(response.data.message);
+      toast.success("Cập nhật thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        location.replace("/dashboard");
+      }, 3000);
     } catch (error) {
       setResponseMessage(
         error.response?.data?.message || "Something went wrong!"
@@ -79,7 +83,10 @@ const UpdateSkill = () => {
 
   return (
     <div className="container mt-100">
-      <h2>Update Skill</h2>
+      <ToastContainer />
+      <Card.Header className="text-center bg-primary text-white">
+        <h3>Update Skill</h3>
+      </Card.Header>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
