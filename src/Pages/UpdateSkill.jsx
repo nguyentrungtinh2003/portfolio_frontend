@@ -75,9 +75,11 @@ const UpdateSkill = () => {
         location.replace("/dashboard");
       }, 3000);
     } catch (error) {
-      setResponseMessage(
-        error.response?.data?.message || "Something went wrong!"
-      );
+      toast.error("Cập nhật kĩ năng không thành công !", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
     }
   };
 

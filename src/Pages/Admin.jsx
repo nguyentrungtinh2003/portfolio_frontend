@@ -5,14 +5,15 @@ import {
   Col,
   Table,
   Button,
-  Modal,
-  Form,
+  Badge,
   Nav,
 } from "react-bootstrap";
 import APISkill from "./APISkill";
 import APIProject from "./APIProject";
 import API from "./API";
 import { ToastContainer, toast, Slide } from "react-toastify";
+import axios from "axios";
+import URL from "./URL";
 const Admin = () => {
   const [activeTab, setActiveTab] = useState("users");
   const [showModal, setShowModal] = useState(false);
@@ -46,9 +47,86 @@ const Admin = () => {
     fetchData(); // Gọi hàm fetchData khi component mount
   }, []); // Chạy một lần khi component render lần đầu tiên
 
-  // Handle Modal open/close
-  const handleShow = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+  const handelDeleteUser = (id, name) => {
+    const conf = window.confirm(`Bạn có muốn xoá người dùng ${name} không ?`);
+    if (conf) {
+      axios
+        .delete(`${URL}/user/${id}`)
+        .then((response) => {
+          toast.success("Xoá người dùng thành công!", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+          console.log(response);
+          setTimeout(() => {
+            window.location.replace("/dashboard");
+          }, 3000);
+        })
+        .catch((error) => {
+          console.error("Error deleting user", error);
+          toast.error("Xoá người dùng thất bại !", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+        });
+    }
+  };
+
+  const handelDeleteSkill = (id, name) => {
+    const conf = window.confirm(`Bạn có muốn xoá kĩ năng ${name} không ?`);
+    if (conf) {
+      axios
+        .delete(`${URL}/skill/${id}`)
+        .then((response) => {
+          toast.success("Xoá kĩ năng thành công!", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+          console.log(response);
+          setTimeout(() => {
+            window.location.replace("/dashboard");
+          }, 3000);
+        })
+        .catch((error) => {
+          console.error("Error deleting user", error);
+          toast.error("Xoá kĩ năng thất bại !", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+        });
+    }
+  };
+
+  const handelDeleteProject = (id, name) => {
+    const conf = window.confirm(`Bạn có muốn xoá dự án ${name} không ?`);
+    if (conf) {
+      axios
+        .delete(`${URL}/project/${id}`)
+        .then((response) => {
+          toast.success("Xoá dự án thành công!", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+          console.log(response);
+          setTimeout(() => {
+            window.location.replace("/dashboard");
+          }, 3000);
+        })
+        .catch((error) => {
+          console.error("Error deleting user", error);
+          toast.error("Xoá dự án thất bại !", {
+            position: "top-right",
+            autoClose: 3000,
+            transition: Slide,
+          });
+        });
+    }
+  };
 
   // Render content based on selected tab
   const renderContent = () => {
@@ -56,7 +134,7 @@ const Admin = () => {
       case "users":
         return (
           <>
-            <h4>Manage Users</h4>
+            <h4 className="mt-100">Manage Users</h4>
             <a href="/addUser">
               <Button variant="primary">
                 <i className="fas fa-plus"></i>
@@ -95,17 +173,26 @@ const Admin = () => {
                   <td>{user.address}</td>
                   <td>{user.position}</td>
                   <td>
-                    <a href={`/viewUser/${user.id}`}>
-                      <button variant="warning" className="me-2">
+                    <button className="btn btn-info me-2">
+                      <a
+                        href={`/viewUser/${user.id}`}
+                        style={{ color: "white" }}
+                      >
                         <i className="fas fa-eye"></i>
-                      </button>
-                    </a>
-                    <a href={`/updateUser/${user.id}`}>
-                      <button variant="warning" className="me-2">
+                      </a>
+                    </button>
+                    <button className="btn btn-warning me-2">
+                      <a
+                        href={`/updateUser/${user.id}`}
+                        style={{ color: "white" }}
+                      >
                         <i className="fas fa-edit"></i>
-                      </button>
-                    </a>
-                    <Button variant="danger">
+                      </a>
+                    </button>
+                    <Button
+                      variant="danger"
+                      onClick={() => handelDeleteUser(user.id, user.username)}
+                    >
                       {" "}
                       <i className="fas fa-trash"></i>{" "}
                     </Button>
@@ -118,7 +205,7 @@ const Admin = () => {
       case "skills":
         return (
           <>
-            <h4>Manage Skills</h4>
+            <h4 className="mt-100">Manage Skills</h4>
             <a href="/addSkill">
               <Button variant="primary">
                 <i className="fas fa-plus"></i>
@@ -140,7 +227,9 @@ const Admin = () => {
                     <tr key={ski.id}>
                       <td>{ski.id}</td>
                       <td>{ski.name}</td>
-                      <td>{ski.level}</td>
+                      <td>
+                        <Badge>{ski.level}</Badge>
+                      </td>
                       <td>
                         {" "}
                         <img
@@ -151,18 +240,27 @@ const Admin = () => {
                         />
                       </td>
                       <td>
-                        <a href={`/viewSkill/${ski.id}`}>
-                          <button variant="warning" className="me-2">
+                        <button className="btn btn-info me-2">
+                          <a
+                            href={`/viewSkill/${ski.id}`}
+                            style={{ color: "white" }}
+                          >
                             <i className="fas fa-eye"></i>
-                          </button>
-                        </a>
-                        <a href={`/updateSkill/${ski.id}`}>
-                          <button variant="warning" className="me-2">
+                          </a>
+                        </button>
+                        <button className="btn btn-warning me-2">
+                          <a
+                            href={`/updateSkill/${ski.id}`}
+                            style={{ color: "white" }}
+                          >
                             <i className="fas fa-edit"></i>
-                          </button>
-                        </a>
+                          </a>
+                        </button>
 
-                        <Button variant="danger">
+                        <Button
+                          variant="danger"
+                          onClick={() => handelDeleteSkill(ski.id, ski.name)}
+                        >
                           {" "}
                           <i className="fas fa-trash"></i>{" "}
                         </Button>
@@ -176,7 +274,7 @@ const Admin = () => {
       case "projects":
         return (
           <>
-            <h4>Manage Projects</h4>
+            <h4 className="mt-100">Manage Projects</h4>
             <a href="/addProject">
               <Button variant="primary">
                 <i className="fas fa-plus"></i>
@@ -201,7 +299,9 @@ const Admin = () => {
                     <td>{project.name}</td>
                     <td>{project.description}</td>
                     <td>{project.technology}</td>
-                    <td>{project.status}</td>
+                    <td>
+                      <Badge>{project.status}</Badge>
+                    </td>
                     <td>
                       {" "}
                       <img
@@ -212,17 +312,28 @@ const Admin = () => {
                       />
                     </td>
                     <td>
-                      <a href={`/viewProject/${project.id}`}>
-                        <button variant="warning" className="me-2">
+                      <button className="btn btn-info me-2">
+                        <a
+                          href={`/viewProject/${project.id}`}
+                          style={{ color: "white" }}
+                        >
                           <i className="fas fa-eye"></i>
-                        </button>
-                      </a>
-                      <a href={`/updateProject/${project.id}`}>
-                        <button variant="warning" className="me-2">
+                        </a>
+                      </button>
+                      <button className="btn btn-warning me-2">
+                        <a
+                          href={`/updateProject/${project.id}`}
+                          style={{ color: "white" }}
+                        >
                           <i className="fas fa-edit"></i>
-                        </button>
-                      </a>
-                      <Button variant="danger">
+                        </a>
+                      </button>
+                      <Button
+                        variant="danger"
+                        onClick={() =>
+                          handelDeleteProject(project.id, project.name)
+                        }
+                      >
                         {" "}
                         <i className="fas fa-trash"></i>{" "}
                       </Button>
@@ -243,7 +354,7 @@ const Admin = () => {
       <Row>
         {/* Left Navbar */}
         <Col md={2} className="bg-light vh-100">
-          <h5 className="text-center py-3">Admin Menu</h5>
+          <h5 className="text-center py-3 mt-100">Admin Menu</h5>
           <Nav className="flex-column">
             <Nav.Link
               className={activeTab === "users" ? "active" : ""}
@@ -271,28 +382,6 @@ const Admin = () => {
           {renderContent()}
         </Col>
       </Row>
-
-      {/* Modal Form */}
-      <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Add New Item</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleClose}>
-              Save
-            </Button>
-          </Form>
-        </Modal.Body>
-      </Modal>
     </Container>
   );
 };

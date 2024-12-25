@@ -100,7 +100,11 @@ const UpdateUser = () => {
       }, 3000);
       console.log("Response:", response.data);
     } catch (error) {
-      setMessage("Error updating user. Please try again.");
+      toast.error("Cập nhật thông tin không thành công !", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
       console.error("Error:", error);
     }
   };

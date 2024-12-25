@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
+import { Badge } from "react-bootstrap";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
@@ -155,20 +156,34 @@ function Navbar() {
             </a>
 
             {localStorage.getItem("img") && (
-              <div className="profile-info">
-                <img
-                  src={localStorage.getItem("img")}
-                  alt="Profile"
-                  className="img-fluid rounded-circle"
-                  style={{ width: "50px", height: "50px" }}
-                />
+              <>
+                <div className="profile-info position-relative">
+                  <img
+                    src={localStorage.getItem("img")}
+                    alt="Profile"
+                    className="img-fluid rounded-circle"
+                    style={{ width: "50px", height: "50px" }}
+                  />
+                  {/* Badge trạng thái online */}
+                  <Badge
+                    pill
+                    bg="success"
+                    className="position-absolute bottom-0 end-0 translate-middle p-2"
+                    style={{ width: "10px", height: "10px" }}
+                  >
+                    <i
+                      className="fas fa-circle"
+                      style={{ fontSize: "2px" }}
+                    ></i>
+                  </Badge>
+                </div>
 
                 <a href="/dashboard">
                   <button className="btn btn-primary m-2">
                     <i class="fas fa-dashboard"></i>
                   </button>
                 </a>
-              </div>
+              </>
             )}
 
             {localStorage.getItem("token") && (

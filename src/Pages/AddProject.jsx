@@ -68,7 +68,11 @@ const AddProject = () => {
       }, 3000);
     } catch (error) {
       console.error(error);
-      alert("Failed to add project.");
+      toast.error("Thêm dự án không thành công !", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
     }
   };
 

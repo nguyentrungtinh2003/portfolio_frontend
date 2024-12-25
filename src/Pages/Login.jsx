@@ -42,12 +42,20 @@ const Login = () => {
         }, 3000);
       }
       if (response.data.status === 500) {
-        setError("Username hoặc password không đúng !");
+        toast.error("Username hoặc password không đúng !", {
+          position: "top-right",
+          autoClose: 3000,
+          transition: Slide,
+        });
       }
       // Có thể lưu token hoặc thông tin người dùng vào localStorage/sessionStorage nếu cần
     } catch (err) {
       console.error("Login failed", err);
-      setError("Invalid email or password."); // Hiển thị lỗi
+      toast.error("Lỗi khi đăng nhập !", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
     }
   };
 
