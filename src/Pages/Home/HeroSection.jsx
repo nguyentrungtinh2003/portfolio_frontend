@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../API";
+import { FaGithub } from "react-icons/fa";
 export default function HeroSection() {
   const [user, setUser] = useState(null);
 
@@ -15,31 +16,45 @@ export default function HeroSection() {
     return <p>Loading...</p>; // Hoặc giao diện chờ
   }
   return (
-    <section id="heroSection" className="hero--section">
-      <div className="hero--section--content--box">
-        <div className="hero--section--content">
-          <h2 className="">{user.fullName}</h2>
-          <h1 className="hero--section--title">
-            <span className="hero--section-title--color">{user.position}</span>{" "}
-            <br />
-            Developer
+    <section id="heroSection" className="container py-5">
+      <div className="row align-items-center">
+        {/* Nội dung chính */}
+        <div className="col-lg-6 text-center text-lg-start">
+          <h2 className="fw-bold">{user.fullName}</h2>
+          <h1 className="display-4 fw-bold text-primary">
+            {user.position} Developer
           </h1>
-          <p className="hero--section-description">
-            <p>
-              Born in {user.birthDay} in the vibrant city of {user.address},
-              currently pursuing a degree at the prestigious {user.university}{" "}
-              in IT.
-            </p>
-            <p>
-              Feel free to connect: Email: {user.email} | Phone:{" "}
-              {user.phoneNumber}
-            </p>
+          <p className="mt-3">
+            Born in <strong>{user.birthDay}</strong> in the vibrant city of{" "}
+            <strong>{user.address}</strong>, currently pursuing a degree at the
+            prestigious <strong>{user.university}</strong> in IT.
           </p>
+          <p className="mt-3">
+            Feel free to connect: <br />
+            <strong>Email:</strong> {user.email} | <strong>Phone:</strong>{" "}
+            {user.phoneNumber}
+          </p>
+          <a
+            href="https://github.com/nguyentrungtinh2003"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
+            <button className="btn btn-dark d-flex align-items-center gap-2">
+              <FaGithub size={24} /> Visit My GitHub
+            </button>
+          </a>
         </div>
-        <button className="btn btn-primary">Get In Touch</button>
-      </div>
-      <div className="hero--section--img">
-        <img src={user.img} alt="Hero Section" />
+
+        {/* Hình ảnh */}
+        <div className="col-lg-6 text-center mt-4 mt-lg-0">
+          <img
+            src={user.img}
+            alt="Hero Section"
+            className="img-fluid rounded shadow"
+            style={{ maxWidth: "400px" }}
+          />
+        </div>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@
       "password": "",
       "address": "HCM City",
       "phoneNumber": "0798948708",
-      "position": "Backend Developer",
+      "position": "Backend",
       "email": "trungtinhn300@gmail.com",
       "birthDay": "2003-09-27",
       "university": "NTT University",
@@ -278,7 +278,7 @@
     {
       "id": 2,
       "name": "Blog",
-      "description": "A personal portfolio website showcasing projects and skills.",
+      "description": "Blog website is a platform for sharing articles on various topics like travel, technology, sports, health, and more, where users can create, read, and search posts while maintaining user authentication and admin control features.",
       "technology": "React, Spring Boot, MySQL",
       "githubLink": "https://github.com/nguyentrungtinh2003/Blog-Frontend,https://github.com/nguyentrungtinh2003/Blog-Backend",
       "startDate": "2022-05-01",
@@ -409,9 +409,9 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Inventory",
-      "description": "A personal portfolio website showcasing projects and skills.",
+      "description": "An inventory system helps track and manage products, stock levels, and orders in a business.",
       "technology": "React, Spring Boot, MySQL",
       "githubLink": "https://github.com/nguyentrungtinh2003/inventory_frontend,https://github.com/nguyentrungtinh2003/inventory_backend",
       "startDate": "2022-05-01",

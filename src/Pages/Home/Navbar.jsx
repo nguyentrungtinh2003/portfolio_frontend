@@ -42,10 +42,16 @@ function Navbar() {
       className={`navbar navbar-expand-lg navbar-light fixed-top ${
         navActive ? "active" : ""
       }`}
+      style={{
+        backgroundColor: "#f8f9fa",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      }}
     >
       <div className="container-fluid">
         <a href="/" className="text-decoration-none">
-          <h3>Portfolio</h3>
+          <h3 className="text-primary" style={{ fontWeight: "bold" }}>
+            Portfolio
+          </h3>
         </a>
         <button
           className="navbar-toggler"
@@ -67,6 +73,7 @@ function Navbar() {
                 duration={500}
                 to="heroSection"
                 className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 Home
               </Link>
@@ -79,22 +86,9 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="mySkills"
-                className="nav-link"
-              >
-                MySkill
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
                 to="AboutMe"
                 className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 About Me
               </Link>
@@ -107,13 +101,28 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="MyPortfolio"
+                to="mySkills"
                 className="nav-link"
+                style={{ fontWeight: "500" }}
               >
-                Portfolio
+                Skills
               </Link>
             </li>
-
+            <li className="nav-item">
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="MyPortfolio"
+                className="nav-link"
+                style={{ fontWeight: "500" }}
+              >
+                Projects
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 onClick={closeMenu}
@@ -124,11 +133,12 @@ function Navbar() {
                 duration={500}
                 to="testimonial"
                 className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 Testimonials
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 onClick={closeMenu}
                 activeClass="navbar--active-content"
@@ -138,20 +148,21 @@ function Navbar() {
                 duration={500}
                 to="sendmail"
                 className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 Send Mail
               </Link>
-            </li>
+            </li> */}
           </ul>
           <div className="navbar-btns">
             <a href="/login">
-              <button className="btn btn-primary m-2">
-                <i class="fas fa-edit"></i>
+              <button className="btn btn-outline-primary m-2">
+                <i className="fas fa-edit"></i>
               </button>
             </a>
             <a href="/chat">
-              <button className="btn btn-primary m-2">
-                <i class="fas fa-comments"></i>
+              <button className="btn btn-outline-primary m-2">
+                <i className="fas fa-comments"></i>
               </button>
             </a>
 
@@ -164,7 +175,6 @@ function Navbar() {
                     className="img-fluid rounded-circle"
                     style={{ width: "50px", height: "50px" }}
                   />
-                  {/* Badge trạng thái online */}
                   <Badge
                     pill
                     bg="success"
@@ -179,8 +189,8 @@ function Navbar() {
                 </div>
 
                 <a href="/dashboard">
-                  <button className="btn btn-primary m-2">
-                    <i class="fas fa-dashboard"></i>
+                  <button className="btn btn-outline-primary m-2">
+                    <i className="fas fa-dashboard"></i>
                   </button>
                 </a>
               </>

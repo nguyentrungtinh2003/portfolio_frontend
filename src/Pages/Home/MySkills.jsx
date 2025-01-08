@@ -35,19 +35,19 @@ export default function MySkills() {
   return (
     <section className="skills-section bg-light py-5" id="mySkills">
       <div className="container">
-        <div className="text-center mb-4">
-          <p className="text-uppercase text-secondary fw-bold fs-4">
+        <div className="text-center mb-5">
+          <h2 className="text-uppercase text-secondary fw-bold fs-3">
             My Skills
-          </p>
+          </h2>
         </div>
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div className="row g-4">
           {skills.map((skill, index) => (
-            <div key={index} className="col">
-              <div className="card skill-card h-100 shadow-lg border-0 rounded-4">
+            <div key={index} className="col-12 col-md-6 col-lg-3">
+              <div className="card skill-card h-100 shadow border-0 rounded-4">
                 <img
                   src={skill.img || "/default-skill-image.jpg"}
                   alt={skill.name || "Skill"}
-                  className="card-img-top rounded-4"
+                  className="card-img-top rounded-top-4"
                 />
                 <div className="card-body text-center">
                   <h5 className="card-title fw-bold text-primary">

@@ -15,75 +15,77 @@ export default function MyPortfolio() {
   }, []);
 
   return (
-    <section className="portfolio-section bg-light" id="MyPortfolio">
+    <section id="MyPortfolio" className="portfolio-section bg-light py-5">
       <div className="container">
         <div className="text-center mb-5">
-          <p className="sub-title text-uppercase text-muted"></p>
-          <h2 className="section-heading fw-bold">My Projects</h2>
+          <h2 className="section-heading fw-bold text-primary">My Projects</h2>
         </div>
         <div className="text-center mb-4">
-          <a href="https://github.com/nguyentrungtinh2003">
-            <button className="btn btn-outline-dark">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 33 33"
-                fill="none"
-              >
-                {/* SVG Path */}
-              </svg>
-              <FaGithub className="m-2"></FaGithub>
-              Visit My GitHub
+          <a
+            href="https://github.com/nguyentrungtinh2003"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
+            <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2">
+              <FaGithub size={24} />{" "}
+              <span className="fw-bold">Visit My GitHub</span>
             </button>
           </a>
         </div>
-        <div className="row gy-4">
+        <div className="row">
           {projects.map((item, index) => {
             const githubLinksArray = item.githubLink
               ? item.githubLink.split(",").map((link) => link.trim())
               : [];
 
             return (
-              <div key={index} className="col-md-6 col-lg-4 skill-card">
-                <div className="card shadow-sm h-100">
+              <div key={index} className="col">
+                <div className="skill-card card shadow-lg border-0 rounded-4 h-100">
                   <img
                     src={item.img}
-                    alt={item.name || "Placeholder"}
-                    className="card-img-top img-fluid"
+                    alt={item.name || "Project Image"}
+                    className="card-img-top rounded-top-4 img-fluid"
+                    style={{ objectFit: "cover", height: "200px" }}
                   />
-                  <div className="card-body">
-                    <h5 className="card-title">{item.name}</h5>
+                  <div className="card-body text-center">
+                    <h5 className="card-title fw-bold text-primary">
+                      {item.name}
+                    </h5>
                     <p className="card-text text-muted">{item.description}</p>
-                    {item.skills &&
-                      item.skills.map((ski, skillIndex) => (
-                        <div key={skillIndex} className="mb-2">
-                          <h6 className="mb-0">{ski.name}</h6>
-                          <small className="text-muted m-2">{ski.level}</small>
-                          <img
-                            src={ski.img}
-                            className="img-fluid mt-2 rounded"
-                            alt={ski.name || "Skill"}
-                            style={{ maxWidth: "50px" }}
-                          />
-                        </div>
-                      ))}
+                    <div className="d-flex flex-wrap justify-content-center gap-2">
+                      {item.skills &&
+                        item.skills.map((ski, skillIndex) => (
+                          <div key={skillIndex} className="text-center">
+                            <img
+                              src={ski.img}
+                              alt={ski.name}
+                              className="img-fluid border shadow-sm"
+                              style={{ maxWidth: "50px" }}
+                            />
+                            <p className="small text-muted mt-1">{ski.name}</p>
+                          </div>
+                        ))}
+                    </div>
                   </div>
-                  <div className="card-footer bg-transparent">
-                    <div className="d-flex flex-wrap gap-2">
-                      {githubLinksArray.map((link, linkIndex) => (
+                  <div className="card-footer bg-transparent border-0 text-center">
+                    {githubLinksArray.map((link, linkIndex) => (
+                      <>
                         <a
                           key={linkIndex}
                           href={link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn btn-sm btn-outline-primary"
+                          className="text-decoration-none"
                         >
-                          <FaGithub className="m-2"></FaGithub>
-                          GitHub Link
+                          <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2 w-100">
+                            <FaGithub size={24} />{" "}
+                            <span className="fw-bold">Github Project</span>
+                          </button>
                         </a>
-                      ))}
-                    </div>
+                        <br></br>
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>
