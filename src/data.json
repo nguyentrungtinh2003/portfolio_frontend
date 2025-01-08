@@ -1,0 +1,545 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "username": "Trung Tinh",
+      "fullName": "Nguyen Trung Tinh",
+      "img": "http://res.cloudinary.com/dzphikbho/image/upload/v1734939449/jvgaz677w1zrhtgafqpc.jpg",
+      "password": "",
+      "address": "HCM City",
+      "phoneNumber": "0798948708",
+      "position": "Backend Developer",
+      "email": "trungtinhn300@gmail.com",
+      "birthDay": "2003-09-27",
+      "university": "NTT University",
+      "hobby": "Coding",
+      "skills": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+      ],
+      "projects": [1, 2]
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+      "level": "EXPERT"
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 4,
+      "name": "React",
+      "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+      "level": "EXPERT"
+    },
+    {
+      "id": 5,
+      "name": "Bootstrap",
+      "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
+      "level": "ADVANCED"
+    },
+    {
+      "id": 6,
+      "name": "Java",
+      "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 7,
+      "name": "Spring Boot",
+      "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+      "level": "EXPERT"
+    },
+    {
+      "id": 8,
+      "name": "JWT",
+      "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
+      "level": "ADVANCED"
+    },
+    {
+      "id": 9,
+      "name": "OAuth2",
+      "img": "https://www.logolynx.com/images/logolynx/05/05798273e3bea7d1e3c1afb6e8aacc31.jpeg",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 10,
+      "name": "JPA/Hibernate",
+      "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 19,
+      "name": "Junit/Mockito",
+      "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 11,
+      "name": "WebSocket",
+      "img": "https://eduardovra.github.io/assets/img/websocket.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 12,
+      "name": "MySQL",
+      "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 13,
+      "name": "SQL Server",
+      "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 14,
+      "name": "Git",
+      "img": "https://pngimg.com/uploads/github/github_PNG19.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 15,
+      "name": "Postman",
+      "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
+      "level": "EXPERT"
+    },
+    {
+      "id": 16,
+      "name": "Docker",
+      "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 17,
+      "name": "Linux",
+      "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 18,
+      "name": "Jira",
+      "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
+      "level": "INTERMEDIATE"
+    },
+    {
+      "id": 19,
+      "name": "Swagger",
+      "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+      "level": "INTERMEDIATE"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Portfolio",
+      "description": "An online store built with React and Spring Boot.",
+      "technology": "React, Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/portfolio_frontend,https://github.com/nguyentrungtinh2003/portfolio_backend",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-01",
+      "status": "COMPLETED",
+      "img": "https://studyadv.s3.amazonaws.com/production/blogs/images/000/000/635/original/maxresdefault.jpg",
+      "skills": [
+        {
+          "id": 1,
+          "name": "HTML",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 2,
+          "name": "CSS",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 3,
+          "name": "JavaScript",
+          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 4,
+          "name": "React",
+          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 5,
+          "name": "Bootstrap",
+          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 6,
+          "name": "Java",
+          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 7,
+          "name": "Spring Boot",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 8,
+          "name": "JWT",
+          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 9,
+          "name": "OAuth2",
+          "img": "https://www.logolynx.com/images/logolynx/05/05798273e3bea7d1e3c1afb6e8aacc31.jpeg",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 10,
+          "name": "JPA/Hibernate",
+          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 19,
+          "name": "Junit/Mockito",
+          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 11,
+          "name": "WebSocket",
+          "img": "https://eduardovra.github.io/assets/img/websocket.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 12,
+          "name": "MySQL",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 13,
+          "name": "SQL Server",
+          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 14,
+          "name": "Git",
+          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 15,
+          "name": "Postman",
+          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 16,
+          "name": "Docker",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 17,
+          "name": "Linux",
+          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 18,
+          "name": "Jira",
+          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 19,
+          "name": "Swagger",
+          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+          "level": "INTERMEDIATE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Blog",
+      "description": "A personal portfolio website showcasing projects and skills.",
+      "technology": "React, Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/Blog-Frontend,https://github.com/nguyentrungtinh2003/Blog-Backend",
+      "startDate": "2022-05-01",
+      "endDate": "2022-11-01",
+      "status": "COMPLETED",
+      "img": "https://tse1.mm.bing.net/th?id=OIP.veSgoo_apQcD_Leesjxx6wHaDs&pid=Api&P=0&h=180",
+      "skills": [
+        {
+          "id": 1,
+          "name": "HTML",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 2,
+          "name": "CSS",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 3,
+          "name": "JavaScript",
+          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 4,
+          "name": "React",
+          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 5,
+          "name": "Bootstrap",
+          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 6,
+          "name": "Java",
+          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 7,
+          "name": "Spring Boot",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 8,
+          "name": "JWT",
+          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 9,
+          "name": "OAuth2",
+          "img": "https://www.logolynx.com/images/logolynx/05/05798273e3bea7d1e3c1afb6e8aacc31.jpeg",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 10,
+          "name": "JPA/Hibernate",
+          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 19,
+          "name": "Junit/Mockito",
+          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 11,
+          "name": "WebSocket",
+          "img": "https://eduardovra.github.io/assets/img/websocket.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 12,
+          "name": "MySQL",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 13,
+          "name": "SQL Server",
+          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 14,
+          "name": "Git",
+          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 15,
+          "name": "Postman",
+          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 16,
+          "name": "Docker",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 17,
+          "name": "Linux",
+          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 18,
+          "name": "Jira",
+          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 19,
+          "name": "Swagger",
+          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+          "level": "INTERMEDIATE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Inventory",
+      "description": "A personal portfolio website showcasing projects and skills.",
+      "technology": "React, Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/inventory_frontend,https://github.com/nguyentrungtinh2003/inventory_backend",
+      "startDate": "2022-05-01",
+      "endDate": "2022-11-01",
+      "status": "COMPLETED",
+      "img": "https://s3-alpha.figma.com/hub/file/2937080222/6831ab46-66c7-485a-bbaa-e5113c4d0aad-cover.png",
+      "skills": [
+        {
+          "id": 1,
+          "name": "HTML",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 2,
+          "name": "CSS",
+          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 3,
+          "name": "JavaScript",
+          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 4,
+          "name": "React",
+          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 5,
+          "name": "Bootstrap",
+          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 6,
+          "name": "Java",
+          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 7,
+          "name": "Spring Boot",
+          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+          "level": "EXPERT"
+        },
+        {
+          "id": 8,
+          "name": "JWT",
+          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
+          "level": "ADVANCED"
+        },
+        {
+          "id": 9,
+          "name": "OAuth2",
+          "img": "https://www.logolynx.com/images/logolynx/05/05798273e3bea7d1e3c1afb6e8aacc31.jpeg",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 10,
+          "name": "JPA/Hibernate",
+          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 19,
+          "name": "Junit/Mockito",
+          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 11,
+          "name": "WebSocket",
+          "img": "https://eduardovra.github.io/assets/img/websocket.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 12,
+          "name": "MySQL",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 13,
+          "name": "SQL Server",
+          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 14,
+          "name": "Git",
+          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 15,
+          "name": "Postman",
+          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
+          "level": "EXPERT"
+        },
+        {
+          "id": 16,
+          "name": "Docker",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 17,
+          "name": "Linux",
+          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 18,
+          "name": "Jira",
+          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
+          "level": "INTERMEDIATE"
+        },
+        {
+          "id": 19,
+          "name": "Swagger",
+          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+          "level": "INTERMEDIATE"
+        }
+      ]
+    }
+  ]
+}

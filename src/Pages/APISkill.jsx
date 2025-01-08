@@ -1,5 +1,6 @@
 import axios from "axios";
 import URL from "./URL";
+import data from "../data.json";
 
 const APISkill = async () => {
   try {
@@ -11,11 +12,12 @@ const APISkill = async () => {
       return data; // Trả về mảng dự án
     } else {
       console.error("API did not return an array.");
-      return []; // Trả về mảng rỗng nếu không phải mảng
+      console.log(data.skills);
+      return data.skills; // Trả về mảng rỗng nếu không phải mảng
     }
   } catch (error) {
     console.error("Error fetching skill data:", error);
-    return []; // Trả về mảng rỗng nếu có lỗi
+    return data.skills; // Trả về mảng rỗng nếu có lỗi
   }
 };
 

@@ -16,7 +16,7 @@ export default function Home() {
       <MyPortfolio />
       <Testimonial />
       {/* <ContactMe /> */}
-      <SendEmailForm />
+      {/* <SendEmailForm /> */}
       <Footer />
     </>
   );

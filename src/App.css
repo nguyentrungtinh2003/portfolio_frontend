@@ -66,6 +66,19 @@
   margin-top: 100px;
 }
 
+/*-------- hover card skill ----*/
+.skill-card {
+  transition: all 0.3s ease; /* Thiết lập chuyển động mượt mà */
+}
+
+.skill-card:hover {
+  transform: translateY(-20px); /* Nâng card lên khi hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng */
+}
+
+.skill-card:hover .card-title {
+  color: #007bff; /* Thay đổi màu sắc của tiêu đề khi hover */
+}
 /*---------------*/
 body {
   margin: 0;

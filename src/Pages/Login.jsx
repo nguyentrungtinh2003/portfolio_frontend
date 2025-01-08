@@ -26,20 +26,22 @@ const Login = () => {
 
       // Kiểm tra kết quả trả về và thực hiện các hành động sau khi đăng nhập thành công
       console.log("Login successful", response.data);
+      toast.success("Đăng nhập thành công!", {
+        position: "top-right",
+        autoClose: 3000,
+        transition: Slide,
+      });
+      setTimeout(() => {
+        window.location.replace("/");
+      }, 3000);
 
       if (response.data.token) {
         localStorage.setItem("userID", response.data.data.id);
         localStorage.setItem("username", response.data.data.username);
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("img", response.data.data.img);
-        toast.success("Đăng nhập thành công!", {
-          position: "top-right",
-          autoClose: 3000,
-          transition: Slide,
-        });
-        setTimeout(() => {
-          location.replace("/dashboard");
-        }, 3000);
+
+        console.log(localStorage.getItem("img"));
       }
       if (response.data.status === 500) {
         toast.error("Username hoặc password không đúng !", {

@@ -18,23 +18,25 @@ export default function MyPortfolio() {
     <section className="portfolio-section bg-light" id="MyPortfolio">
       <div className="container">
         <div className="text-center mb-5">
-          <p className="sub-title text-uppercase text-muted">My Projects</p>
-          <h2 className="section-heading fw-bold">My Portfolio</h2>
+          <p className="sub-title text-uppercase text-muted"></p>
+          <h2 className="section-heading fw-bold">My Projects</h2>
         </div>
         <div className="text-center mb-4">
-          <button className="btn btn-outline-dark">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 33 33"
-              fill="none"
-            >
-              {/* SVG Path */}
-            </svg>
-            <FaGithub className="m-2"></FaGithub>
-            Visit My GitHub
-          </button>
+          <a href="https://github.com/nguyentrungtinh2003">
+            <button className="btn btn-outline-dark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 33 33"
+                fill="none"
+              >
+                {/* SVG Path */}
+              </svg>
+              <FaGithub className="m-2"></FaGithub>
+              Visit My GitHub
+            </button>
+          </a>
         </div>
         <div className="row gy-4">
           {projects.map((item, index) => {
@@ -43,7 +45,7 @@ export default function MyPortfolio() {
               : [];
 
             return (
-              <div key={index} className="col-md-6 col-lg-4">
+              <div key={index} className="col-md-6 col-lg-4 skill-card">
                 <div className="card shadow-sm h-100">
                   <img
                     src={item.img}
