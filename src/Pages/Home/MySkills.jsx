@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import APISkill from "../APISkill";
+import { Badge } from "react-bootstrap";
 
 export default function MySkills() {
   const [skills, setSkills] = useState(null);
@@ -36,9 +37,7 @@ export default function MySkills() {
     <section className="skills-section bg-light py-5" id="mySkills">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="text-uppercase text-secondary fw-bold fs-3">
-            My Skills
-          </h2>
+          <h1 className="fw-bold text-primary">My Skills</h1>
         </div>
         <div className="row g-4">
           {skills.map((skill, index) => (
@@ -53,9 +52,7 @@ export default function MySkills() {
                   <h5 className="card-title fw-bold text-primary">
                     {skill.name || "No Name"}
                   </h5>
-                  <p className="card-text text-muted">
-                    {skill.level || "No Level Specified"}
-                  </p>
+                  <Badge>{skill.level}</Badge>
                 </div>
               </div>
             </div>

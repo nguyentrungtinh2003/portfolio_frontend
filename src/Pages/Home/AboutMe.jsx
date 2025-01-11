@@ -21,9 +21,9 @@ export default function AboutMe() {
         <div className="row align-items-center">
           <div className="col-lg-6 text-center">
             <img
-              src={user.img}
+              src="./img/img-2.png"
               alt="About Me"
-              className="img-fluid rounded-4 shadow"
+              className="img-fluid rounded-4 shadow project-img"
             />
           </div>
           <div className="col-lg-6">

@@ -116,14 +116,14 @@ function Navbar() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="MyPortfolio"
+                to="MyProjects"
                 className="nav-link"
                 style={{ fontWeight: "500" }}
               >
                 Projects
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 onClick={closeMenu}
                 activeClass="navbar--active-content"
@@ -137,7 +137,7 @@ function Navbar() {
               >
                 Testimonials
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item">
               <Link
                 onClick={closeMenu}

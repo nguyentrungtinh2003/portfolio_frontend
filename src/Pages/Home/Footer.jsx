@@ -1,56 +1,108 @@
 import { Link } from "react-scroll";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const [navActive, setNavActive] = useState(false);
+  const navigate = useNavigate();
+
+  const toggleNav = () => {
+    setNavActive(!navActive);
+  };
+
+  const closeMenu = () => {
+    setNavActive(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 500) {
+        setNavActive(false); // Đảm bảo menu đóng khi màn hình đủ rộng
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
-    <footer className="footer--container">
+    <footer
+      className={`footer--container ${navActive ? "active" : ""}`}
+      style={{
+        backgroundColor: "#f8f9fa",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <div className="footer--link--container">
         <div>
           <img src="" alt="Portfolio" />
         </div>
         <div className="footer--items">
           <ul>
-            <li>
+            <li className="nav-item">
               <Link
+                onClick={closeMenu}
                 activeClass="navbar--active-content"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 to="heroSection"
-                className="text-md"
+                className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 Home
               </Link>
             </li>
-            <li>
+            <li className="nav-item">
               <Link
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="MyPortfolio"
-                className="text-md"
-              >
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link
+                onClick={closeMenu}
                 activeClass="navbar--active-content"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 to="AboutMe"
-                className="text-md"
+                className="nav-link"
+                style={{ fontWeight: "500" }}
               >
                 About Me
               </Link>
             </li>
-            <li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="mySkills"
+                className="nav-link"
+                style={{ fontWeight: "500" }}
+              >
+                Skills
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="MyProjects"
+                className="nav-link"
+                style={{ fontWeight: "500" }}
+              >
+                Projects
+              </Link>
+            </li>
+            {/* <li>
               <Link
                 activeClass="navbar--active-content"
                 spy={true}
@@ -75,7 +127,7 @@ function Footer() {
               >
                 Testimonials
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="footer--social--icon">
@@ -143,7 +195,7 @@ function Footer() {
         <p className="footer--content">Made with 💖 by Trung Tinh</p>
         <div className="footer--social--icon">
           <ul>
-            <li>
+            {/* <li>
               <Link
                 activeClass="navbar--active-content"
                 spy={true}
@@ -181,7 +233,7 @@ function Footer() {
               >
                 Cookies Settings
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

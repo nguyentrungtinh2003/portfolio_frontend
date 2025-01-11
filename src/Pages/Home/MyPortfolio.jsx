@@ -15,10 +15,10 @@ export default function MyPortfolio() {
   }, []);
 
   return (
-    <section id="MyPortfolio" className="portfolio-section bg-light py-5">
+    <section id="MyProjects" className="portfolio-section bg-light py-5">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="section-heading fw-bold text-primary">My Projects</h2>
+          <h1 className="fw-bold text-primary">My Projects</h1>
         </div>
         <div className="text-center mb-4">
           <a
@@ -28,12 +28,12 @@ export default function MyPortfolio() {
             className="text-decoration-none"
           >
             <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2">
-              <FaGithub size={24} />{" "}
+              <FaGithub size={24} />
               <span className="fw-bold">Visit My GitHub</span>
             </button>
           </a>
         </div>
-        <div className="row">
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {projects.map((item, index) => {
             const githubLinksArray = item.githubLink
               ? item.githubLink.split(",").map((link) => link.trim())
@@ -79,11 +79,11 @@ export default function MyPortfolio() {
                           className="text-decoration-none"
                         >
                           <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2 w-100">
-                            <FaGithub size={24} />{" "}
+                            <FaGithub size={24} />
                             <span className="fw-bold">Github Project</span>
                           </button>
                         </a>
-                        <br></br>
+                        <br />
                       </>
                     ))}
                   </div>

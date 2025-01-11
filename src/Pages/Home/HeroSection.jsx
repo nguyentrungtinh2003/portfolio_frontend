@@ -51,7 +51,7 @@ export default function HeroSection() {
           <img
             src={user.img}
             alt="Hero Section"
-            className="img-fluid rounded shadow"
+            className="img-fluid rounded shadow project-img"
             style={{ maxWidth: "400px" }}
           />
         </div>

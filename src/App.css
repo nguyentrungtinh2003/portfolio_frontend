@@ -315,6 +315,16 @@ h2 {
   height: 100%;
 }
 /* Hero Section Style Ends */
+/*----  img animation ---*/
+.project-img {
+  object-fit: cover;
+  height: 300px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-img:hover {
+  transform: scale(1.1);
+}
 
 /* Skills Section Style */
 .skills--section {
