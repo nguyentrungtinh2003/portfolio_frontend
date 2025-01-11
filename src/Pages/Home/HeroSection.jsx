@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../API";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function HeroSection() {
   const [user, setUser] = useState(null);
 
@@ -42,6 +42,17 @@ export default function HeroSection() {
           >
             <button className="btn btn-dark d-flex align-items-center gap-2">
               <FaGithub size={24} /> Visit My GitHub
+            </button>
+          </a>
+          <br></br>
+          <a
+            href="https://www.linkedin.com/in/nguyen-trung-tinh-513a70337/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
+            <button className="btn btn-primary d-flex align-items-center gap-2">
+              <FaLinkedin size={24} /> Visit My Linkedin
             </button>
           </a>
         </div>
