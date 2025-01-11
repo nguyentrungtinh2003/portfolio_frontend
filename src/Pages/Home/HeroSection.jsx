@@ -16,7 +16,7 @@ export default function HeroSection() {
     return <p>Loading...</p>; // Hoặc giao diện chờ
   }
   return (
-    <section id="heroSection" className="container py-5">
+    <section id="heroSection" className="container py-5 mt-100">
       <div className="row align-items-center">
         {/* Nội dung chính */}
         <div className="col-lg-6 text-center text-lg-start">

@@ -69,23 +69,32 @@ export default function MyPortfolio() {
                     </div>
                   </div>
                   <div className="card-footer bg-transparent border-0 text-center">
-                    {githubLinksArray.map((link, linkIndex) => (
-                      <>
-                        <a
-                          key={linkIndex}
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-decoration-none"
-                        >
-                          <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2 w-100">
-                            <FaGithub size={24} />
-                            <span className="fw-bold">Github Project</span>
-                          </button>
-                        </a>
-                        <br />
-                      </>
-                    ))}
+                    {githubLinksArray.map((link, linkIndex) => {
+                      const isLinkFrontend = link
+                        .toLowerCase()
+                        .includes("frontend");
+                      const btnText = isLinkFrontend
+                        ? "Link Github Frontend"
+                        : "Link Github Backend";
+
+                      return (
+                        <>
+                          <a
+                            key={linkIndex}
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-decoration-none"
+                          >
+                            <button className="btn btn-dark d-flex align-items-center gap-2 justify-content-center px-4 py-2 w-100">
+                              <FaGithub size={24} />
+                              <span className="fw-bold">{btnText}</span>
+                            </button>
+                          </a>
+                          <br />
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
