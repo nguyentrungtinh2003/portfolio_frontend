@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import API from "../API";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 export default function HeroSection() {
   const [user, setUser] = useState(null);
 
@@ -53,6 +53,17 @@ export default function HeroSection() {
           >
             <button className="btn btn-primary d-flex align-items-center gap-2">
               <FaLinkedin size={24} /> Visit My Linkedin
+            </button>
+          </a>
+          <br></br>
+          <a
+            href="/cv.pdf"
+            download="CV_NguyenTrungTinh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="btn btn-primary">
+              <FaDownload /> Dowload CV
             </button>
           </a>
         </div>
