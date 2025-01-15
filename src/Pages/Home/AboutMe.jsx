@@ -19,40 +19,54 @@ export default function AboutMe() {
     <section id="AboutMe" className="about-section bg-light py-5">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6 text-center">
+          {/* Hình ảnh */}
+          <div className="col-lg-6 text-center mb-4 mb-lg-0">
             <img
               src="./img/img-2.png"
               alt="About Me"
-              className="img-fluid rounded-4 shadow project-img"
+              className="img-fluid shadow project-img"
+              style={{ maxWidth: "300px" }}
             />
           </div>
+          {/* Nội dung */}
           <div className="col-lg-6">
-            <div className="text-center text-lg-start">
-              <h1 className="fw-bold text-primary">About Me</h1>
+            <div>
+              <h1 className="fw-bold text-primary mb-4">About Me</h1>
               <p className="text-muted">
-                I’m a motivated {user.position} Developer Intern with a strong
-                interest in building efficient and scalable web applications. I
-                have experience working with technologies like Spring Boot for
-                {user.position} development, and I'm also proficient in frontend
-                technologies such as HTML, CSS, JavaScript, and React. My goal
-                is to contribute to meaningful projects and continue to learn
-                from experienced professionals in the field.
+                Hello! My name is <strong>{user.fullName}</strong>, and I am a
+                passionate <strong>{user.position}</strong> Developer Intern
+                with a focus on creating efficient, scalable, and user-friendly
+                web applications. I thrive on solving complex problems and
+                continuously improving my skills to stay updated with the latest
+                technologies.
               </p>
               <p className="text-muted">
-                I have hands-on experience building RESTful APIs using Spring
-                Boot, managing databases with MySQL, and creating responsive,
-                user-friendly web pages with HTML, CSS, and Bootstrap.
-                Additionally, I am familiar with integrating frontend
-                applications with backend services, using React to create
-                interactive user interfaces.
+                I have a solid background in <strong>Java</strong> and{" "}
+                <strong>Spring Boot</strong>, focusing on backend development
+                and API design. I am also skilled in <strong>MySQL</strong> for
+                relational database management and have experience working with
+                large datasets, ensuring optimal performance and security.
               </p>
               <p className="text-muted">
-                I am passionate about improving my skills and am always eager to
-                learn new technologies to enhance my development abilities. My
-                focus is on writing clean, maintainable code, and I am keen on
-                following best practices in software development. I am excited
-                to contribute to real-world projects and collaborate with teams
-                to create impactful applications.
+                On the frontend side, I am proficient in <strong>React</strong>,{" "}
+                <strong>HTML</strong>, <strong>CSS</strong>, and{" "}
+                <strong>JavaScript</strong>. I enjoy creating interactive and
+                responsive web interfaces while maintaining a strong focus on
+                user experience (UX) and design principles.
+              </p>
+              <p className="text-muted">
+                Throughout my academic and internship experiences, I have worked
+                on various projects involving both frontend and backend
+                technologies. I am committed to writing clean, maintainable, and
+                scalable code. I also value collaboration and teamwork, often
+                participating in group projects and open-source contributions.
+              </p>
+              <p className="text-muted">
+                When I'm not coding, I enjoy exploring new frameworks,
+                participating in coding challenges, and staying involved in the
+                developer community. My long-term goal is to become a full-stack
+                developer and contribute to impactful projects that make a
+                difference.
               </p>
             </div>
           </div>
