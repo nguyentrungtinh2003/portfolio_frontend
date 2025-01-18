@@ -145,7 +145,7 @@
     {
       "id": 1,
       "name": "Portfolio",
-      "description": "An online store built with React and Spring Boot.",
+      "description": "A portfolio website built with React and Spring Boot, showcasing personal information, skills, and projects.",
       "technology": "React, Spring Boot, MySQL",
       "githubLink": "https://github.com/nguyentrungtinh2003/portfolio_frontend,https://github.com/nguyentrungtinh2003/portfolio_backend",
       "startDate": "2023-01-01",
