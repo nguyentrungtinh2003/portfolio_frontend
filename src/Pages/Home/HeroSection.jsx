@@ -28,12 +28,13 @@ export default function HeroSection() {
           <div className="col-lg-6 text-center text-lg-start">
             <h2 className="fw-bold">{user.fullName}</h2>
             <h1 className="display-4 fw-bold text-primary">
-              {user.position} Developer
+              Java {user.position} Developer
             </h1>
             <p className="mt-3">
               Born in <strong>{user.birthDay}</strong> in the vibrant city of{" "}
               <strong>{user.address}</strong>, currently pursuing a degree at
-              the prestigious <strong>{user.university}</strong> in IT.
+              the prestigious <strong>{user.university}</strong> in{" "}
+              <strong>IT</strong>.
             </p>
             <p className="mt-3">
               Feel free to connect: <br />
@@ -63,12 +64,13 @@ export default function HeroSection() {
             </a>
             <br></br>
             <a
-              href="/cv.pdf"
-              download="CV_NguyenTrungTinh.pdf"
+              href="/CV_NguyenTrungTinh_EN.pdf"
+              download="CV_NguyenTrungTinh_EN.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-decoration-none"
             >
-              <button className="btn btn-danger">
+              <button className="btn btn-danger d-flex align-items-center gap-2">
                 <FaDownload /> Dowload CV
               </button>
             </a>

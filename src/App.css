@@ -80,6 +80,17 @@
   color: #007bff; /* Thay đổi màu sắc của tiêu đề khi hover */
 }
 /*---------------*/
+
+.social-icon {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff;
+}
+
+/*-----------*/
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;

@@ -68,7 +68,9 @@ function Navbar() {
           onClick={toggleNav}
           aria-expanded={navActive ? "true" : "false"}
         >
-          <span className="navbar-toggler-icon"></span>
+          {/* <span className="navbar-toggler-icon"> */}
+          <i className="fa fa-bars" style={{ color: "black" }}></i>
+          {/* </span> */}
         </button>
         <div className={`collapse navbar-collapse ${navActive ? "show" : ""}`}>
           <ul className="navbar-nav ml-auto">
