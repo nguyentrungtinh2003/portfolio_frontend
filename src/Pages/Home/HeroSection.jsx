@@ -71,7 +71,7 @@ export default function HeroSection() {
               className="text-decoration-none"
             >
               <button className="btn btn-danger d-flex align-items-center gap-2">
-                <FaDownload /> Dowload CV
+                <FaDownload /> Download CV
               </button>
             </a>
           </div>
