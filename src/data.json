@@ -139,6 +139,12 @@
       "name": "Swagger",
       "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
       "level": "BEGINNER"
+    },
+    {
+      "id": 20,
+      "name": "Cloudinary",
+      "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
+      "level": "BEGINNER"
     }
   ],
   "projects": [
@@ -271,6 +277,12 @@
           "id": 19,
           "name": "Swagger",
           "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 20,
+          "name": "Cloudinary",
+          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
           "level": "BEGINNER"
         }
       ]
@@ -405,6 +417,12 @@
           "name": "Swagger",
           "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
           "level": "BEGINNER"
+        },
+        {
+          "id": 20,
+          "name": "Cloudinary",
+          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
+          "level": "BEGINNER"
         }
       ]
     },
@@ -538,6 +556,12 @@
           "name": "Swagger",
           "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
           "level": "BEGINNER"
+        },
+        {
+          "id": 20,
+          "name": "Cloudinary",
+          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
+          "level": "BEGINNER"
         }
       ]
     },
@@ -670,6 +694,12 @@
           "id": 19,
           "name": "Swagger",
           "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 20,
+          "name": "Cloudinary",
+          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
           "level": "BEGINNER"
         }
       ]
