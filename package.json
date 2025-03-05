@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=12.x"
   },
+  "homepage": "https://nguyentrungtinh2003.github.io/portfolio_frontend",
   "dependencies": {
     "@stomp/stompjs": "^7.0.0",
     "axios": "^1.7.9",
@@ -22,7 +23,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -37,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.3.0"
   }
 }
