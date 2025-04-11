@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import { Badge } from "react-bootstrap";
+import API from "../API";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   const toggleNav = () => {
@@ -16,6 +18,12 @@ function Navbar() {
   };
 
   useEffect(() => {
+    const fetchUser = () => {
+      const userData = API();
+      setUser(userData);
+    };
+
+    fetchUser();
     const handleResize = () => {
       if (window.innerWidth > 500) {
         setNavActive(false); // Đảm bảo menu đóng khi màn hình đủ rộng
@@ -177,11 +185,11 @@ function Navbar() {
               </button>
             </a>
 
-            {localStorage.getItem("img") && (
+            {(localStorage.getItem("img") || (user && user.img)) && (
               <>
                 <div className="profile-info position-relative">
                   <img
-                    src={localStorage.getItem("img")}
+                    src={localStorage.getItem("img") || user.img}
                     alt="Profile"
                     className="img-fluid rounded-circle"
                     style={{ width: "50px", height: "50px" }}

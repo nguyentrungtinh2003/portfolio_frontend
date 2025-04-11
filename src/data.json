@@ -145,6 +145,30 @@
       "name": "Cloudinary",
       "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
       "level": "BEGINNER"
+    },
+    {
+      "id": 21,
+      "name": "MongoDB",
+      "img": "https://static-00.iconduck.com/assets.00/mongodb-plain-wordmark-icon-1024x1014-kx3uk337.png",
+      "level": "BEGINNER"
+    },
+    {
+      "id": 22,
+      "name": "Vercel",
+      "img": "https://ik.imagekit.io/asyrafhussin/purecss/vercel-logo_pRxdMheEW.png?tr=w-1080",
+      "level": "BEGINNER"
+    },
+    {
+      "id": 23,
+      "name": "Render",
+      "img": "https://avatars.githubusercontent.com/u/36424661?s=200&v=4",
+      "level": "BEGINNER"
+    },
+    {
+      "id": 24,
+      "name": "NodeJS",
+      "img": "https://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png",
+      "level": "BEGINNER"
     }
   ],
   "projects": [
