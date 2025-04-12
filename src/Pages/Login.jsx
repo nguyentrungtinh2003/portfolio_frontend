@@ -25,7 +25,7 @@ const Login = () => {
       const response = await axios.post(`${URL}/user/login`, user);
 
       // Kiểm tra kết quả trả về và thực hiện các hành động sau khi đăng nhập thành công
-      console.log("Login successful", response.data);
+      console.log("Login success", response.data);
       toast.success("Đăng nhập thành công!", {
         position: "top-right",
         autoClose: 3000,
