@@ -64,8 +64,8 @@ export default function HeroSection() {
             </a>
             <br></br>
             <a
-              href="/CV_NguyenTrungTinh_EN.pdf"
-              download="CV_NguyenTrungTinh_EN.pdf"
+              href="/SE - Nguyen Trung Tinh.pdf"
+              download="SE - Nguyen Trung Tinh.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-decoration-none"

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import API from "../API";
+import img2 from "/img2.png";
 export default function AboutMe() {
   const [user, setUser] = useState(null);
 
@@ -22,7 +23,7 @@ export default function AboutMe() {
           {/* Hình ảnh */}
           <div className="col-lg-6 text-center mb-4 mb-lg-0">
             <img
-              src="./img/img-2.png"
+              src={img2}
               alt="About Me"
               className="img-fluid shadow project-img"
               style={{ maxWidth: "300px" }}
