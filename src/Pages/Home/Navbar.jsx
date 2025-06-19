@@ -9,215 +9,147 @@ function Navbar() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
-  const toggleNav = () => {
-    setNavActive(!navActive);
-  };
-
-  const closeMenu = () => {
-    setNavActive(false);
-  };
+  const toggleNav = () => setNavActive(!navActive);
+  const closeMenu = () => setNavActive(false);
 
   useEffect(() => {
-    const fetchUser = () => {
-      const userData = API();
+    const fetchUser = async () => {
+      const userData = await API();
       setUser(userData);
     };
 
     fetchUser();
+
     const handleResize = () => {
-      if (window.innerWidth > 500) {
-        setNavActive(false); // Đảm bảo menu đóng khi màn hình đủ rộng
-      }
+      if (window.innerWidth > 768) setNavActive(false);
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
     localStorage.removeItem("img");
-
-    navigate("/"); // Đăng xuất và điều hướng về trang chủ
+    navigate("/");
   };
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-light fixed-top ${
+      className={`navbar navbar-expand-lg navbar-dark fixed-top ${
         navActive ? "active" : ""
       }`}
       style={{
-        backgroundColor: "#f8f9fa",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#000",
+        boxShadow: "0 4px 8px rgba(255, 255, 255, 0.1)",
+        padding: "10px 20px",
+        zIndex: 1000,
       }}
     >
-      <div className="container-fluid">
-        <a href="/" className="text-decoration-none">
+      <div className="container-fluid d-flex align-items-center justify-content-between">
+        {/* Logo */}
+        <a href="/" className="navbar-brand d-flex align-items-center gap-2">
           <img
             src="https://cdn.dribbble.com/users/5720644/screenshots/13912339/media/cfc570f6891e4aef4ae3c5282a767847.gif"
             alt="Portfolio"
-            width={80}
-            height={80}
+            width={50}
+            height={50}
             style={{
-              borderRadius: "50%", // Làm tròn hoàn toàn icon
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)", // Hiệu ứng đổ bóng nhẹ
-              objectFit: "cover", // Cắt ảnh để vừa vặn với khung tròn
-              border: "2px solid white", // Viền trắng cho đẹp hơn
+              borderRadius: "50%",
+              border: "2px solid #ffc107",
+              objectFit: "cover",
+              boxShadow: "0 0 10px #ffc107",
             }}
           />
+          <span className="fw-bold text-warning fs-5 d-none d-md-inline">
+            MyPortfolio
+          </span>
         </a>
+
+        {/* Toggle button for mobile */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           onClick={toggleNav}
-          aria-expanded={navActive ? "true" : "false"}
         >
-          {/* <span className="navbar-toggler-icon"> */}
-          <i className="fa fa-bars" style={{ color: "black" }}></i>
-          {/* </span> */}
+          <i className="fa fa-bars text-warning fs-3"></i>
         </button>
+
+        {/* Navbar menu */}
         <div className={`collapse navbar-collapse ${navActive ? "show" : ""}`}>
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="heroSection"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="AboutMe"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                About Me
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="mySkills"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                Skills
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="MyProjects"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                Projects
-              </Link>
-            </li>
-            {/* <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="testimonial"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                Testimonials
-              </Link>
-            </li> */}
-            {/* <li className="nav-item">
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                to="sendmail"
-                className="nav-link"
-                style={{ fontWeight: "500" }}
-              >
-                Send Mail
-              </Link>
-            </li> */}
+          <ul className="navbar-nav ms-auto text-center text-lg-start gap-lg-4">
+            {[
+              { label: "Home", to: "heroSection" },
+              { label: "About Me", to: "AboutMe" },
+              { label: "Skills", to: "mySkills" },
+              { label: "Projects", to: "MyProjects" },
+            ].map((item, i) => (
+              <li key={i} className="nav-item">
+                <Link
+                  onClick={closeMenu}
+                  activeClass="text-warning fw-bold"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to={item.to}
+                  className="nav-link text-warning px-3 py-2 rounded"
+                  style={{
+                    transition: "all 0.3s ease",
+                    cursor: "pointer",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div className="navbar-btns">
-            <a href="/login">
-              <button className="btn btn-outline-primary m-2">
-                <i className="fas fa-edit"></i>
-              </button>
+
+          {/* Nút phải */}
+          <div className="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0 flex-wrap justify-content-center gap-2">
+            {/* <a href="/login" className="btn btn-outline-warning rounded-pill">
+              <i className="fas fa-user"></i>
             </a>
-            <a href="/chat">
-              <button className="btn btn-outline-primary m-2">
-                <i className="fas fa-comments"></i>
-              </button>
-            </a>
+            <a href="/chat" className="btn btn-outline-warning rounded-pill">
+              <i className="fas fa-comments"></i>
+            </a> */}
 
             {(localStorage.getItem("img") || (user && user.img)) && (
               <>
-                <div className="profile-info position-relative">
+                <div className="position-relative">
                   <img
-                    src={localStorage.getItem("img") || user.img}
+                    src="./img1.png"
                     alt="Profile"
-                    className="img-fluid rounded-circle"
-                    style={{ width: "50px", height: "50px" }}
+                    className="rounded-circle"
+                    style={{
+                      width: "45px",
+                      height: "45px",
+                      objectFit: "cover",
+                    }}
                   />
                   <Badge
                     pill
                     bg="success"
                     className="position-absolute bottom-0 end-0 translate-middle p-2"
                     style={{ width: "10px", height: "10px" }}
-                  >
-                    <i
-                      className="fas fa-circle"
-                      style={{ fontSize: "2px" }}
-                    ></i>
-                  </Badge>
+                  />
                 </div>
-
-                <a href="/dashboard">
-                  <button className="btn btn-outline-primary m-2">
-                    <i className="fas fa-dashboard"></i>
-                  </button>
-                </a>
+                {/* <a
+                  href="/dashboard"
+                  className="btn btn-outline-warning rounded-pill"
+                >
+                  <i className="fas fa-chart-line"></i>
+                </a> */}
               </>
             )}
 
             {localStorage.getItem("token") && (
-              <button className="btn btn-danger ms-2" onClick={handleLogout}>
-                <i className="fas fa-sign-out"></i>
+              <button
+                className="btn btn-danger rounded-pill"
+                onClick={handleLogout}
+              >
+                <i className="fas fa-sign-out-alt"></i>
               </button>
             )}
           </div>

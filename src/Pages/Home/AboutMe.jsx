@@ -1,7 +1,7 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import API from "../API";
 import img2 from "/img2.png";
+
 export default function AboutMe() {
   const [user, setUser] = useState(null);
 
@@ -13,61 +13,63 @@ export default function AboutMe() {
 
     fetchUser();
   }, []);
+
   if (!user) {
-    return <h4>Loading ...</h4>;
+    return (
+      <section
+        className="d-flex justify-content-center align-items-center bg-dark text-white"
+        style={{ minHeight: "100vh" }}
+      >
+        <h4 className="fs-4">Đang tải thông tin...</h4>
+      </section>
+    );
   }
+
   return (
-    <section id="AboutMe" className="about-section bg-light py-5">
+    <section id="AboutMe" className="bg-dark text-white py-5">
       <div className="container">
         <div className="row align-items-center">
           {/* Hình ảnh */}
-          <div className="col-lg-6 text-center mb-4 mb-lg-0">
+          <div className="col-md-6 text-center mb-4 mb-md-0">
             <img
               src={img2}
               alt="About Me"
-              className="img-fluid shadow project-img"
+              className="img-fluid rounded shadow"
               style={{ maxWidth: "300px" }}
             />
           </div>
+
           {/* Nội dung */}
-          <div className="col-lg-6">
-            <div>
-              <h1 className="fw-bold text-primary mb-4">About Me</h1>
-              <p className="text-muted">
-                Hello! My name is <strong>{user.fullName}</strong>, and I am a
-                passionate <strong>{user.position}</strong> Developer Intern
-                with a focus on creating efficient, scalable, and user-friendly
-                web applications. I thrive on solving complex problems and
-                continuously improving my skills to stay updated with the latest
-                technologies.
+          <div className="col-md-6">
+            <h1 className="fw-bold text-warning mb-4">About Me</h1>
+            <div className="text-light">
+              <p>
+                Hello! I'm <strong>{user.fullName}</strong>, currently an intern
+                in the position of <strong>{user.position}</strong> Developer.
+                I'm passionate about building efficient, user-friendly, and
+                scalable web applications.
               </p>
-              <p className="text-muted">
-                I have a solid background in <strong>Java</strong> and{" "}
-                <strong>Spring Boot</strong>, focusing on backend development
-                and API design. I am also skilled in <strong>MySQL</strong> for
-                relational database management and have experience working with
-                large datasets, ensuring optimal performance and security.
+              <p>
+                With a solid foundation in <strong>Java</strong> and{" "}
+                <strong>Spring Boot</strong>, I focus on backend development and
+                API design, working with <strong>MySQL</strong> to manage
+                databases effectively and securely.
               </p>
-              <p className="text-muted">
-                On the frontend side, I am proficient in <strong>React</strong>,{" "}
+              <p>
+                On the frontend, I use <strong>React</strong> along with{" "}
                 <strong>HTML</strong>, <strong>CSS</strong>, and{" "}
-                <strong>JavaScript</strong>. I enjoy creating interactive and
-                responsive web interfaces while maintaining a strong focus on
-                user experience (UX) and design principles.
+                <strong>JavaScript</strong> to create beautiful, responsive, and
+                user-friendly interfaces.
               </p>
-              <p className="text-muted">
-                Throughout my academic and internship experiences, I have worked
-                on various projects involving both frontend and backend
-                technologies. I am committed to writing clean, maintainable, and
-                scalable code. I also value collaboration and teamwork, often
-                participating in group projects and open-source contributions.
+              <p>
+                I often participate in projects that integrate both frontend and
+                backend, emphasizing clean, maintainable code and effective
+                teamwork.
               </p>
-              <p className="text-muted">
-                When I'm not coding, I enjoy exploring new frameworks,
-                participating in coding challenges, and staying involved in the
-                developer community. My long-term goal is to become a full-stack
-                developer and contribute to impactful projects that make a
-                difference.
+              <p>
+                Outside of work, I enjoy exploring new technologies, challenging
+                myself with programming competitions, and aspire to become a
+                full-stack developer in the future.
               </p>
             </div>
           </div>

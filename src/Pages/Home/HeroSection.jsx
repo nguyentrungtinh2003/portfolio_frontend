@@ -1,92 +1,121 @@
 import { useEffect, useState } from "react";
 import API from "../API";
-import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
-import { ToastContainer, toast, Slide } from "react-toastify";
+import {
+  FaDownload,
+  FaGithub,
+  FaLinkedin,
+  FaCertificate,
+  FaFileAlt,
+} from "react-icons/fa";
+
 export default function HeroSection() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        // Gọi API và lấy dữ liệu người dùng
         const userData = await API();
         setUser(userData);
-      } catch (error) {}
+      } catch (error) {
+        console.error("Lỗi tải user:", error);
+      }
     };
 
     fetchUser();
   }, []);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return (
+      <div className="bg-dark text-warning min-vh-100 d-flex justify-content-center align-items-center">
+        <h4>Đang tải thông tin...</h4>
+      </div>
+    );
   }
+
   return (
-    <>
-      <section id="heroSection" className="container py-5 mt-100">
-        <div className="row align-items-center">
-          {/* Nội dung chính */}
-          <div className="col-lg-6 text-center text-lg-start">
-            <h2 className="fw-bold">{user.fullName}</h2>
-            <h1 className="display-4 fw-bold text-primary">
-              Java {user.position} Developer
+    <section id="heroSection" className="bg-dark text-warning py-5 mt-100">
+      <div className="container">
+        <div className="row align-items-center justify-content-between">
+          {/* Cột nội dung - bên trái */}
+          <div className="col-lg-7 text-center text-lg-start order-2 order-lg-1">
+            <h1 className="fw-bold display-5 text-warning mb-2">
+              {user.position} Developer
             </h1>
-            <p className="mt-3">
-              Born in <strong>{user.birthDay}</strong> in the vibrant city of{" "}
-              <strong>{user.address}</strong>, currently pursuing a degree at
-              the prestigious <strong>{user.university}</strong> in{" "}
-              <strong>IT</strong>.
+            <h3 className="fw-bold text-white mb-3">{user.fullName}</h3>
+
+            <p className="mb-2 text-light">
+              📍 <strong>{user.address}</strong> &nbsp; | &nbsp; 🎓{" "}
+              <strong>{user.university}</strong> &nbsp; | &nbsp; 🗓{" "}
+              <strong>{user.birthDay}</strong>
             </p>
-            <p className="mt-3">
-              Feel free to connect: <br />
-              <strong>Email:</strong> {user.email} | <strong>Phone:</strong>{" "}
-              {user.phoneNumber}
+            <p className="mb-2">
+              💼 Intern at{" "}
+              <span className="text-info fw-semibold">Kyanon Digital</span>
             </p>
-            <a
-              href="https://github.com/nguyentrungtinh2003"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <button className="btn btn-dark d-flex align-items-center gap-2">
-                <FaGithub size={24} /> Visit My GitHub
-              </button>
-            </a>
-            <br></br>
-            <a
-              href="https://www.linkedin.com/in/nguyen-trung-tinh-513a70337/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <button className="btn btn-primary d-flex align-items-center gap-2">
-                <FaLinkedin size={24} /> Visit My Linkedin
-              </button>
-            </a>
-            <br></br>
-            <a
-              href="/SE - Nguyen Trung Tinh.pdf"
-              download="SE - Nguyen Trung Tinh.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <button className="btn btn-danger d-flex align-items-center gap-2">
-                <FaDownload /> Download CV
-              </button>
-            </a>
+            <p className="mb-2 text-light">
+              📧 <strong>Email:</strong> {user.email}
+              <br />
+              📞 <strong>Phone:</strong> {user.phoneNumber}
+            </p>
+
+            {/* Nút hành động */}
+            <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
+              <a
+                href="https://github.com/nguyentrungtinh2003"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <button className="btn btn-outline-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                  <FaGithub size={18} /> GitHub
+                </button>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/nguyen-trung-tinh-513a70337/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <button className="btn btn-outline-info d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                  <FaLinkedin size={18} /> LinkedIn
+                </button>
+              </a>
+
+              <a
+                href="https://www.canva.com/design/DAGbx4G56n4/n1vJ7wU4jLPBwpNH3wXRbg/edit?utm_content=DAGbx4G56n4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                className="text-decoration-none"
+              >
+                <button className="btn btn-outline-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                  <FaFileAlt size={18} /> CV
+                </button>
+              </a>
+
+              <a
+                href="https://drive.google.com/file/d/1erMnxXiBd4CfFQOSTjEkHj0utXhSk63T/view?usp=sharing"
+                className="text-decoration-none"
+              >
+                <button className="btn btn-outline-warning d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                  <FaCertificate size={18} />
+                  Oracle Certificate
+                </button>
+              </a>
+            </div>
           </div>
 
-          {/* Hình ảnh */}
-          <div className="col-lg-6 text-center mt-4 mt-lg-0">
+          {/* Cột hình ảnh - bên phải */}
+          <div className="col-lg-5 mb-4 mb-lg-0 text-center order-1 order-lg-2">
             <img
-              src={user.img}
+              src="./img1.png"
               alt="Hero Section"
-              className="img-fluid rounded shadow project-img"
-              style={{ maxWidth: "400px" }}
+              className="img-fluid shadow"
+              style={{
+                objectFit: "cover",
+              }}
             />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

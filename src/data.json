@@ -59,7 +59,7 @@
     {
       "id": 7,
       "name": "Spring Boot",
-      "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+      "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
       "level": "BEGINNER"
     },
     {
@@ -107,7 +107,7 @@
     {
       "id": 14,
       "name": "Git",
-      "img": "https://pngimg.com/uploads/github/github_PNG19.png",
+      "img": "https://icon-library.com/images/github-icon-svg/github-icon-svg-12.jpg",
       "level": "BEGINNER"
     },
     {
@@ -169,561 +169,73 @@
       "name": "NodeJS",
       "img": "https://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png",
       "level": "BEGINNER"
+    },
+    {
+      "id": 25,
+      "name": "PostgreSQL",
+      "img": "https://cdn.icon-icons.com/icons2/2699/PNG/512/postgresql_src_logo_icon_170834.png",
+      "level": "BEGINNER"
     }
   ],
   "projects": [
     {
       "id": 1,
-      "name": "Portfolio",
-      "description": "A portfolio website built with React and Spring Boot, showcasing personal information, skills, and projects.",
+      "name": "Barber Shop",
+      "description": "A modern barber shop offering professional haircuts, shaves, and grooming services. Convenient online booking and quality customer care.",
       "technology": "React, Spring Boot, MySQL",
-      "githubLink": "https://github.com/nguyentrungtinh2003/portfolio_frontend,https://github.com/nguyentrungtinh2003/portfolio_backend",
+      "githubLink": "https://github.com/nguyentrungtinh2003/barbershop_frontend,https://github.com/nguyentrungtinh2003/barbershop_backend",
       "startDate": "2023-01-01",
       "endDate": "2023-06-01",
       "status": "COMPLETED",
-      "img": "https://studyadv.s3.amazonaws.com/production/blogs/images/000/000/635/original/maxresdefault.jpg",
+      "img": "https://sallauretta.com/wp-content/uploads/51259655_ml.jpg",
       "skills": [
         {
           "id": 1,
-          "name": "HTML",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 2,
-          "name": "CSS",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 3,
-          "name": "JavaScript",
-          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 4,
           "name": "React",
           "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
           "level": "BEGINNER"
         },
         {
-          "id": 5,
-          "name": "Bootstrap",
-          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 6,
-          "name": "Java",
-          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 7,
+          "id": 2,
           "name": "Spring Boot",
-          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
+          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
           "level": "BEGINNER"
         },
         {
-          "id": 8,
-          "name": "JWT",
-          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 9,
-          "name": "OAuth2",
-          "img": "http://www.daimto.com/wp-content/uploads/2015/08/Google-OAuth@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 10,
-          "name": "JPA/Hibernate",
-          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Junit/Mockito",
-          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 11,
-          "name": "WebSocket",
-          "img": "https://eduardovra.github.io/assets/img/websocket.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 12,
+          "id": 3,
           "name": "MySQL",
           "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 13,
-          "name": "SQL Server",
-          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 14,
-          "name": "Git",
-          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 15,
-          "name": "Postman",
-          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 16,
-          "name": "Docker",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 17,
-          "name": "Linux",
-          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 18,
-          "name": "Jira",
-          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Swagger",
-          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 20,
-          "name": "Cloudinary",
-          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
           "level": "BEGINNER"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Blog",
-      "description": "Blog website is a platform for sharing articles on various topics like travel, technology, sports, health, and more, where users can create, read, and search posts while maintaining user authentication and admin control features.",
-      "technology": "React, Spring Boot, MySQL",
-      "githubLink": "https://github.com/nguyentrungtinh2003/Blog-Frontend,https://github.com/nguyentrungtinh2003/Blog-Backend",
+      "name": "Online Programming Learning Management",
+      "description": "An online platform for learning programming through structured video tutorials, integrated with a built-in code editor for hands-on practice.",
+      "technology": "React, Spring Boot, PostgreSQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/online_learning_management_system_frontend,https://github.com/nguyentrungtinh2003/online_learning_management_system_backend",
       "startDate": "2022-05-01",
       "endDate": "2022-11-01",
       "status": "COMPLETED",
-      "img": "https://tse1.mm.bing.net/th?id=OIP.veSgoo_apQcD_Leesjxx6wHaDs&pid=Api&P=0&h=180",
+      "img": "./img-code.png",
       "skills": [
         {
           "id": 1,
-          "name": "HTML",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 2,
-          "name": "CSS",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 3,
-          "name": "JavaScript",
-          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 4,
           "name": "React",
           "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
           "level": "BEGINNER"
         },
         {
-          "id": 5,
-          "name": "Bootstrap",
-          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 6,
-          "name": "Java",
-          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 7,
-          "name": "Spring Boot",
-          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 8,
-          "name": "JWT",
-          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 9,
-          "name": "OAuth2",
-          "img": "http://www.daimto.com/wp-content/uploads/2015/08/Google-OAuth@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 10,
-          "name": "JPA/Hibernate",
-          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Junit/Mockito",
-          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 11,
-          "name": "WebSocket",
-          "img": "https://eduardovra.github.io/assets/img/websocket.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 12,
-          "name": "MySQL",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 13,
-          "name": "SQL Server",
-          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 14,
-          "name": "Git",
-          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 15,
-          "name": "Postman",
-          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 16,
-          "name": "Docker",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 17,
-          "name": "Linux",
-          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 18,
-          "name": "Jira",
-          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Swagger",
-          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 20,
-          "name": "Cloudinary",
-          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
-          "level": "BEGINNER"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Inventory",
-      "description": "An inventory system helps track and manage products, stock levels, and orders in a business.",
-      "technology": "React, Spring Boot, MySQL",
-      "githubLink": "https://github.com/nguyentrungtinh2003/inventory_frontend,https://github.com/nguyentrungtinh2003/inventory_backend",
-      "startDate": "2022-05-01",
-      "endDate": "2022-11-01",
-      "status": "COMPLETED",
-      "img": "https://s3-alpha.figma.com/hub/file/2937080222/6831ab46-66c7-485a-bbaa-e5113c4d0aad-cover.png",
-      "skills": [
-        {
-          "id": 1,
-          "name": "HTML",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
-          "level": "BEGINNER"
-        },
-        {
           "id": 2,
-          "name": "CSS",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
+          "name": "Spring Boot",
+          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
           "level": "BEGINNER"
         },
         {
           "id": 3,
-          "name": "JavaScript",
-          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 4,
-          "name": "React",
-          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 5,
-          "name": "Bootstrap",
-          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 6,
-          "name": "Java",
-          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 7,
-          "name": "Spring Boot",
-          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 8,
-          "name": "JWT",
-          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 9,
-          "name": "OAuth2",
-          "img": "http://www.daimto.com/wp-content/uploads/2015/08/Google-OAuth@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 10,
-          "name": "JPA/Hibernate",
-          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Junit/Mockito",
-          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 11,
-          "name": "WebSocket",
-          "img": "https://eduardovra.github.io/assets/img/websocket.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 12,
-          "name": "MySQL",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 13,
-          "name": "SQL Server",
-          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 14,
-          "name": "Git",
-          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 15,
-          "name": "Postman",
-          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 16,
-          "name": "Docker",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 17,
-          "name": "Linux",
-          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 18,
-          "name": "Jira",
-          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Swagger",
-          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 20,
-          "name": "Cloudinary",
-          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
-          "level": "BEGINNER"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Room Management System",
-      "description": "Room Management System for rental housing, designed to efficiently manage room availability, tenant information, and rental payments.",
-      "technology": "React, Spring Boot, MySQL",
-      "githubLink": "https://github.com/nguyentrungtinh2003/room_management_system_frontend,https://github.com/nguyentrungtinh2003/room_management_system_backend",
-      "startDate": "2024-05-01",
-      "endDate": "2024-11-01",
-      "status": "COMPLETED",
-      "img": "https://img6.thuthuatphanmem.vn/uploads/2022/06/06/mau-phong-tro-gac-lung-thong-minh_033249302.jpg",
-      "skills": [
-        {
-          "id": 1,
-          "name": "HTML",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 2,
-          "name": "CSS",
-          "img": "https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 3,
-          "name": "JavaScript",
-          "img": "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 4,
-          "name": "React",
-          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 5,
-          "name": "Bootstrap",
-          "img": "http://pluspng.com/img-png/bootstrap-png-bootstrap-512.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 6,
-          "name": "Java",
-          "img": "https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 7,
-          "name": "Spring Boot",
-          "img": "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/spring-boot-1_5zDxm9B.jpg",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 8,
-          "name": "JWT",
-          "img": "http://ordina-jworks.github.io/img/JWT/jwt-logo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 9,
-          "name": "OAuth2",
-          "img": "http://www.daimto.com/wp-content/uploads/2015/08/Google-OAuth@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 10,
-          "name": "JPA/Hibernate",
-          "img": "http://www.mastertheboss.com/wp-content/uploads/2021/12/jpalogo.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Junit/Mockito",
-          "img": "https://velog.velcdn.com/images/goldcong/post/b8be083f-51cb-4a89-bbf4-56e4f687f397/image.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 11,
-          "name": "WebSocket",
-          "img": "https://eduardovra.github.io/assets/img/websocket.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 12,
-          "name": "MySQL",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 13,
-          "name": "SQL Server",
-          "img": "http://clipart.info/images/ccovers/1499955337microsoft-sql-server-logo-png.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 14,
-          "name": "Git",
-          "img": "https://pngimg.com/uploads/github/github_PNG19.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 15,
-          "name": "Postman",
-          "img": "https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 16,
-          "name": "Docker",
-          "img": "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 17,
-          "name": "Linux",
-          "img": "https://cdn.iconscout.com/icon/free/png-512/linux-17-570099.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 18,
-          "name": "Jira",
-          "img": "https://www.device42.com/wp-content/uploads/2019/07/jira-logo-gradient-blue@2x.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 19,
-          "name": "Swagger",
-          "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
-          "level": "BEGINNER"
-        },
-        {
-          "id": 20,
-          "name": "Cloudinary",
-          "img": "https://marketplace.commercetools.com/img/containers/assets/cloudinary_logo_blue_769x537.png/8e29c2855e06be62262107337a1818ec.png",
+          "name": "PostgreSQL",
+          "img": "https://cdn.icon-icons.com/icons2/2699/PNG/512/postgresql_src_logo_icon_170834.png",
           "level": "BEGINNER"
         }
       ]

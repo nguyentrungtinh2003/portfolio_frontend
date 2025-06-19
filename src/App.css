@@ -63,7 +63,12 @@
 }
 
 .mt-100 {
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(255, 193, 7, 0.2);
 }
 
 /*-------- hover card skill ----*/
