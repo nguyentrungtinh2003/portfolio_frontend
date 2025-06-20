@@ -119,7 +119,7 @@ function Navbar() {
               <>
                 <div className="position-relative">
                   <img
-                    src="./img1.png"
+                    src="./img3.jpg"
                     alt="Profile"
                     className="rounded-circle"
                     style={{
@@ -144,14 +144,14 @@ function Navbar() {
               </>
             )}
 
-            {localStorage.getItem("token") && (
+            {/* {localStorage.getItem("token") && (
               <button
                 className="btn btn-danger rounded-pill"
                 onClick={handleLogout}
               >
                 <i className="fas fa-sign-out-alt"></i>
               </button>
-            )}
+            )} */}
           </div>
         </div>
       </div>

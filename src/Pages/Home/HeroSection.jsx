@@ -106,7 +106,7 @@ export default function HeroSection() {
           {/* Cột hình ảnh - bên phải */}
           <div className="col-lg-5 mb-4 mb-lg-0 text-center order-1 order-lg-2">
             <img
-              src="./img1.png"
+              src="./img3.jpg"
               alt="Hero Section"
               className="img-fluid shadow"
               style={{
