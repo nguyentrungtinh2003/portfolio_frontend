@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaCertificate,
   FaFileAlt,
+  FaDocker,
 } from "react-icons/fa";
 
 export default function HeroSection() {
@@ -66,8 +67,19 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="text-decoration-none"
               >
-                <button className="btn btn-outline-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                <button className="btn btn-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
                   <FaGithub size={18} /> GitHub
+                </button>
+              </a>
+
+              <a
+                href="https://hub.docker.com/repositories/nguyentrungtinh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+              >
+                <button className="btn btn-primary d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                  <FaDocker size={18} /> DockerHub
                 </button>
               </a>
 
@@ -77,7 +89,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="text-decoration-none"
               >
-                <button className="btn btn-outline-info d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                <button className="btn btn-info d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
                   <FaLinkedin size={18} /> LinkedIn
                 </button>
               </a>
@@ -86,7 +98,7 @@ export default function HeroSection() {
                 href="https://www.canva.com/design/DAGbx4G56n4/n1vJ7wU4jLPBwpNH3wXRbg/edit?utm_content=DAGbx4G56n4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                 className="text-decoration-none"
               >
-                <button className="btn btn-outline-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                <button className="btn btn-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
                   <FaFileAlt size={18} /> CV
                 </button>
               </a>
@@ -95,7 +107,7 @@ export default function HeroSection() {
                 href="https://drive.google.com/file/d/1erMnxXiBd4CfFQOSTjEkHj0utXhSk63T/view?usp=sharing"
                 className="text-decoration-none"
               >
-                <button className="btn btn-outline-warning d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
+                <button className="btn btn-warning d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
                   <FaCertificate size={18} />
                   Oracle Certificate
                 </button>

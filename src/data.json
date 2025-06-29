@@ -239,6 +239,37 @@
           "level": "BEGINNER"
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Blog Application",
+      "description": "A blog web app built with React and Spring Boot, allowing users to create and like posts.",
+      "technology": "React, Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/Blog-Frontend,https://github.com/nguyentrungtinh2003/Blog-Backend",
+      "startDate": "2022-05-01",
+      "endDate": "2022-11-01",
+      "status": "COMPLETED",
+      "img": "https://cdn.pixabay.com/photo/2012/05/07/18/57/blog-49006_1280.png",
+      "skills": [
+        {
+          "id": 1,
+          "name": "React",
+          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 2,
+          "name": "Spring Boot",
+          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 3,
+          "name": "MySQL",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
+          "level": "BEGINNER"
+        }
+      ]
     }
   ]
 }
