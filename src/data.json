@@ -175,6 +175,12 @@
       "name": "PostgreSQL",
       "img": "https://cdn.icon-icons.com/icons2/2699/PNG/512/postgresql_src_logo_icon_170834.png",
       "level": "BEGINNER"
+    },
+    {
+      "id": 26,
+      "name": "Redis",
+      "img": "https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-128.png",
+      "level": "BEGINNER"
     }
   ],
   "projects": [
