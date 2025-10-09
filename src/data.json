@@ -276,6 +276,37 @@
           "level": "BEGINNER"
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "URL Checker Application",
+      "description": "A web application that checks the safety of URLs using Google Safe Browsing, VirusTotal, and PhishTank APIs",
+      "technology": "React, Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/check_link_frontend,https://github.com/nguyentrungtinh2003/check_link_backend",
+      "startDate": "2025-08-01",
+      "endDate": "2025-10-01",
+      "status": "COMPLETED",
+      "img": "./img-url-checker.png",
+      "skills": [
+        {
+          "id": 1,
+          "name": "React",
+          "img": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2019/01/react.jpg",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 2,
+          "name": "Spring Boot",
+          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 3,
+          "name": "PostgreSQL",
+          "img": "https://cdn.icon-icons.com/icons2/2699/PNG/512/postgresql_src_logo_icon_170834.png",
+          "level": "BEGINNER"
+        }
+      ]
     }
   ]
 }
