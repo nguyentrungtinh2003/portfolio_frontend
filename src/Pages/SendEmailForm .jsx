@@ -18,7 +18,7 @@ const SendEmailForm = () => {
       return;
     }
 
-    // Tạo payload
+    
     const payload = {
       email,
       subject,
