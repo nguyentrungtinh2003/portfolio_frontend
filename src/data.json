@@ -137,7 +137,7 @@
     {
       "id": 19,
       "name": "Swagger",
-      "img": "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+      "img": "https://svgstack.com/media/img/swagger-logo-xTUe014050.webp",
       "level": "BEGINNER"
     },
     {
@@ -149,7 +149,7 @@
     {
       "id": 21,
       "name": "MongoDB",
-      "img": "https://static-00.iconduck.com/assets.00/mongodb-plain-wordmark-icon-1024x1014-kx3uk337.png",
+      "img": "https://www.pngkey.com/png/full/383-3838923_open-mongodb-icon.png",
       "level": "BEGINNER"
     },
     {
@@ -304,6 +304,31 @@
           "id": 3,
           "name": "PostgreSQL",
           "img": "https://cdn.icon-icons.com/icons2/2699/PNG/512/postgresql_src_logo_icon_170834.png",
+          "level": "BEGINNER"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Microservice-Platform for User-Project Management",
+      "description": "A scalable microservices-based User–Project Management system that enables multiple users to collaborate across multiple projects with secure communication and independent service deployment.",
+      "technology": "Spring Boot, MySQL",
+      "githubLink": "https://github.com/nguyentrungtinh2003/microservices-platform",
+      "startDate": "2025-11-01",
+      "endDate": "2025-12-01",
+      "status": "COMPLETED",
+      "img": "./microservice.png",
+      "skills": [
+        {
+          "id": 1,
+          "name": "Spring Boot",
+          "img": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt-h5BnuWvoOMEVwD386k6fd-reYDF0VfY-e4SGoKXMb3mGcgEDtejEnmQDbCIHv09BeozLJEqU7y8iGktyob_4tnPQKlJXUT97qmVD7xQRrzoDKcYQTtq-mtgNjDJ_IB0kScGfndVdaD1dDivojIJ3Eia2hS-3Z4UoiV9o7VIFoavplpyfkWRGNnSlds/w447-h447/spring-boot-1_5zDxm9B.webp",
+          "level": "BEGINNER"
+        },
+        {
+          "id": 2,
+          "name": "MySQL",
+          "img": "https://cdn4.iconfinder.com/data/icons/logos-3/181/MySQL-1024.png",
           "level": "BEGINNER"
         }
       ]
