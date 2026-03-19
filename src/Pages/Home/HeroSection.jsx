@@ -49,10 +49,10 @@ export default function HeroSection() {
               <strong>{user.university}</strong> &nbsp; | &nbsp; 🗓{" "}
               <strong>{user.birthDay}</strong>
             </p>
-            <p className="mb-2">
-              💼 Intern at{" "}
-              <span className="text-info fw-semibold">Kyanon Digital</span>
-            </p>
+          <p className="mb-2">
+            <span className="text-info fw-semibold">Backend Intern | Kyanon Digital</span>
+            <span className="text-info fw-semibold">03/2025 - 06/2025</span>
+          </p>
             <p className="mb-2 text-light">
               📧 <strong>Email:</strong> {user.email}
               <br />
