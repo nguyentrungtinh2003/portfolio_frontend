@@ -51,6 +51,7 @@ export default function HeroSection() {
             </p>
           <p className="mb-2">
             <span className="text-info fw-semibold">Backend Intern | Kyanon Digital</span>
+            {" "}
             <span className="text-info fw-semibold">03/2025 - 06/2025</span>
           </p>
             <p className="mb-2 text-light">
