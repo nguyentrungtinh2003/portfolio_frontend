@@ -95,7 +95,7 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="https://www.canva.com/design/DAGbx4G56n4/n1vJ7wU4jLPBwpNH3wXRbg/edit?utm_content=DAGbx4G56n4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                href="/NguyenTrungTinh_EntryLevelBackend_CV.pdf"
                 className="text-decoration-none"
               >
                 <button className="btn btn-light d-flex align-items-center gap-2 px-3 py-2 shadow-sm">
